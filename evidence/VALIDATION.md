@@ -19,11 +19,11 @@ The documented verification command also passed from a fresh clone with a new vi
 
 - The Python response test compared Pydantic's normalized timestamp strings with the original wire spelling. It now compares timezone-aware date-times as instants. A regression test also verifies that different instants and different ordinary strings still fail comparison. The SDK's datetime parsing behavior is unchanged.
 - Fetch transport and contract probes now omit a body for GET/HEAD, resolving lint findings and making that constraint explicit.
-- Test/mock scripts are executable in the checkout.
-- SDK README installation commands use these local files rather than unrelated registry packages. Distribution names explicitly identify the Octri demos, and npm packages are private.
+- Demo setup correction: our ZIP extraction lost executable permissions. The original Octri ZIPs correctly stored `scripts/test` and `scripts/mock` as mode `0755`; this was not a generator defect. Permissions were restored in Git.
+- Demo setup correction: installation instructions now use local files and unofficial distribution names. Generated registry-install instructions assume a published package; these demo packages are unpublished. npm packages are private.
 - Dependency lockfiles and a repeatable verification command are included. Formatting was applied to changed source and test files.
 
-These are local demo repairs to Octri output. The original spec snapshots and original ZIP hashes remain in provenance. Regenerating in Octri may require reapplying these repairs until the generator itself incorporates them. **Use the current repository or demo ZIP when sharing; the earlier CDN ZIPs do not contain these repairs.**
+The timestamp comparator, mock header encoding, fixture synthesis, redundant import alias, and generated lint failures described above are issues in generated output. Executable permissions and unofficial installation/package names are demo setup corrections. These repairs currently live in the demo repositories; the Octri generator implementation was not changed. The original spec snapshots and original ZIP hashes remain in provenance. Regenerating in Octri may require reapplying these repairs until the generator itself incorporates them. **Use the current repository or demo ZIP when sharing; the earlier CDN ZIPs do not contain these repairs.**
 
 ## Reproduce the full checks
 
