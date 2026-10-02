@@ -1,0 +1,1361 @@
+[
+  {
+    "id": "behavior-1",
+    "operationId": "getYoutubeVideo",
+    "method": "GET",
+    "path": "/youtube/video",
+    "signature": "{\"errors\":[\"json\",\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":true,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "query-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "id",
+        "location": "query",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "https://youtu.be/dQw4w9WgXcQ"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "id": "dQw4w9WgXcQ",
+        "title": "Rick Astley - Never Gonna Give You Up (Official Music Video)",
+        "description": "The official music video for \"Never Gonna Give You Up\"...",
+        "duration": 213,
+        "channel": {
+          "id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+          "name": "Rick Astley"
+        },
+        "tags": [
+          "Rick Astley",
+          "Official Video",
+          "Music"
+        ],
+        "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+        "uploadDate": "2009-10-25T00:00:00.000Z",
+        "viewCount": 1234567890,
+        "likeCount": 12345678,
+        "transcriptLanguages": [
+          "en",
+          "es",
+          "fr"
+        ]
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-2",
+    "operationId": "getYoutubePlaylistVideos",
+    "method": "GET",
+    "path": "/youtube/playlist/videos",
+    "signature": "{\"errors\":[\"json\",\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":true,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "query-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "id",
+        "location": "query",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "https://www.youtube.com/playlist?list=PLlaN88a7y2_plecYoJxvRFTLHVbIVAOoc"
+      },
+      {
+        "name": "limit",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": 10
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "videoIds": [
+          "dQw4w9WgXcQ",
+          "xvFZjo5PgG0"
+        ],
+        "shortIds": [
+          "dQw4w9WgXcQ",
+          "xvFZjo5PgG0"
+        ],
+        "liveIds": [
+          "dQw4w9WgXcQ",
+          "xvFZjo5PgG0"
+        ]
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-3",
+    "operationId": "getYoutubeChannelVideos",
+    "method": "GET",
+    "path": "/youtube/channel/videos",
+    "signature": "{\"errors\":[\"json\",\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":true,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "query-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "id",
+        "location": "query",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw"
+      },
+      {
+        "name": "limit",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": 10
+      },
+      {
+        "name": "type",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "video"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "videoIds": [
+          "dQw4w9WgXcQ",
+          "xvFZjo5PgG0"
+        ],
+        "shortIds": [
+          "dQw4w9WgXcQ",
+          "xvFZjo5PgG0"
+        ],
+        "liveIds": [
+          "dQw4w9WgXcQ",
+          "xvFZjo5PgG0"
+        ]
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-4",
+    "operationId": "getYoutubeTranscript",
+    "method": "GET",
+    "path": "/youtube/transcript",
+    "signature": "{\"errors\":[\"json\",\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\",\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "query-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "url",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "https://youtu.be/dQw4w9WgXcQ"
+      },
+      {
+        "name": "videoId",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "dQw4w9WgXcQ"
+      },
+      {
+        "name": "text",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": false
+      },
+      {
+        "name": "chunkSize",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": 1000
+      },
+      {
+        "name": "lang",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "en"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "content": [
+          {
+            "text": "Never gonna give you up...",
+            "offset": 8150,
+            "duration": 1200,
+            "lang": "en"
+          }
+        ],
+        "lang": "en",
+        "availableLangs": [
+          "en",
+          "es",
+          "zh-TW"
+        ]
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-5",
+    "operationId": "getYoutubeTranscriptTranslate",
+    "method": "GET",
+    "path": "/youtube/transcript/translate",
+    "signature": "{\"errors\":[\"json\",\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":true,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\",\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "query-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "url",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "https://youtu.be/dQw4w9WgXcQ"
+      },
+      {
+        "name": "videoId",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "dQw4w9WgXcQ"
+      },
+      {
+        "name": "text",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": false
+      },
+      {
+        "name": "chunkSize",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": 1000
+      },
+      {
+        "name": "lang",
+        "location": "query",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "en"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "content": [
+          {
+            "text": "Never gonna give you up...",
+            "offset": 8150,
+            "duration": 1200,
+            "lang": "en"
+          }
+        ],
+        "lang": "es"
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-6",
+    "operationId": "postYoutubeTranscriptBatch",
+    "method": "POST",
+    "path": "/youtube/transcript/batch",
+    "signature": "{\"errors\":[\"json\",\"json\"],\"method\":\"POST\",\"nullable\":false,\"pagination\":null,\"parameters\":[],\"request\":[\"json\"],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-request",
+      "json-response"
+    ],
+    "parameters": [],
+    "request": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "videoIds": [
+          "dQw4w9WgXcQ",
+          "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+        ]
+      }
+    },
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "jobId": "123e4567-e89b-12d3-a456-426614174000"
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-7",
+    "operationId": "postYoutubeVideoBatch",
+    "method": "POST",
+    "path": "/youtube/video/batch",
+    "signature": "{\"errors\":[\"json\",\"json\",\"json\"],\"method\":\"POST\",\"nullable\":false,\"pagination\":null,\"parameters\":[],\"request\":[\"json\"],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-request",
+      "json-response"
+    ],
+    "parameters": [],
+    "request": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "videoIds": [
+          "dQw4w9WgXcQ",
+          "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+        ]
+      }
+    },
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "jobId": "123e4567-e89b-12d3-a456-426614174000"
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-8",
+    "operationId": "getYoutubeBatchByJobId",
+    "method": "GET",
+    "path": "/youtube/batch/{jobId}",
+    "signature": "{\"errors\":[\"json\",\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "path-serialization",
+      "query-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "jobId",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "jsonContent": false,
+        "value": "job-1"
+      },
+      {
+        "name": "limit",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": 1
+      },
+      {
+        "name": "offset",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": 0
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "status": "completed",
+        "errorCode": "job-expired",
+        "results": [
+          {
+            "videoId": "dQw4w9WgXcQ",
+            "transcript": {
+              "content": [
+                {
+                  "text": "Never gonna give you up...",
+                  "offset": 8150,
+                  "duration": 1200,
+                  "lang": "en"
+                }
+              ],
+              "lang": "en",
+              "availableLangs": [
+                "en",
+                "es",
+                "zh-TW"
+              ]
+            },
+            "video": {
+              "id": "dQw4w9WgXcQ",
+              "title": "Rick Astley - Never Gonna Give You Up (Official Music Video)",
+              "description": "The official music video for \"Never Gonna Give You Up\"...",
+              "duration": 213,
+              "channel": {
+                "id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+                "name": "Rick Astley"
+              },
+              "tags": [
+                "Rick Astley",
+                "Official Video",
+                "Music"
+              ],
+              "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+              "uploadDate": "2009-10-25T00:00:00.000Z",
+              "viewCount": 1234567890,
+              "likeCount": 12345678,
+              "transcriptLanguages": [
+                "en",
+                "es",
+                "fr"
+              ]
+            },
+            "errorCode": "not-found"
+          }
+        ],
+        "stats": {
+          "total": 10,
+          "succeeded": 8,
+          "failed": 2
+        },
+        "completedAt": "2025-04-03T06:59:53.428Z"
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-9",
+    "operationId": "getYoutubeSearch",
+    "method": "GET",
+    "path": "/youtube/search",
+    "signature": "{\"errors\":[\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":true,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":true,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "query-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "query",
+        "location": "query",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "Never Gonna Give You Up"
+      },
+      {
+        "name": "uploadDate",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "month"
+      },
+      {
+        "name": "type",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "video"
+      },
+      {
+        "name": "duration",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "medium"
+      },
+      {
+        "name": "sortBy",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "views"
+      },
+      {
+        "name": "features",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": [
+          "hd",
+          "subtitles",
+          "creative-commons"
+        ]
+      },
+      {
+        "name": "limit",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": 50
+      },
+      {
+        "name": "nextPageToken",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "eyJxdWVyeSI6IlJpY2sgQXN0bGV5IiwiZmlsdGVycyI6e319"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "query": "Rick Astley Never Gonna Give You Up",
+        "results": [
+          {
+            "type": "video",
+            "id": "dQw4w9WgXcQ",
+            "title": "Rick Astley - Never Gonna Give You Up (Official Video)",
+            "description": "The official music video for Rick Astley...",
+            "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+            "duration": 213,
+            "viewCount": 1234567890,
+            "uploadDate": "2009-10-25T00:00:00.000Z",
+            "channel": {
+              "id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+              "name": "Rick Astley",
+              "thumbnail": "https://yt3.ggpht.com/..."
+            },
+            "handle": "@RickAstleyYT",
+            "videoCount": 100
+          }
+        ],
+        "totalResults": 1000000,
+        "nextPageToken": "eyJxdWVyeSI6IlJpY2sgQXN0bGV5IiwiZmlsdGVycyI6e319"
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-10",
+    "operationId": "getWebScrape",
+    "method": "GET",
+    "path": "/web/scrape",
+    "signature": "{\"errors\":[\"json\",\"json\",\"json\",\"json\",\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":true,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "query-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "url",
+        "location": "query",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "https://supadata.ai"
+      },
+      {
+        "name": "noLinks",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": false
+      },
+      {
+        "name": "lang",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "en"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "url": "https://supadata.ai",
+        "content": "# Supadata\n## What is Supadata?\nSupadata is an API platform for data extraction for LLM training.",
+        "name": "Supadata: Web & YouTube to text API for developers",
+        "description": "Supadata is one stop-shop API for developers to read web and YouTube content, ready for AI training and retrieval.",
+        "ogUrl": "https://supadata.ai/opengraph-image.png",
+        "countCharacters": 12300,
+        "urls": [
+          "https://supadata.ai",
+          "https://docs.supadata.ai"
+        ]
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-11",
+    "operationId": "getWebCrawlByJobId",
+    "method": "GET",
+    "path": "/web/crawl/{jobId}",
+    "signature": "{\"errors\":[\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "path-serialization",
+      "query-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "jobId",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "jsonContent": false,
+        "value": "job-1"
+      },
+      {
+        "name": "skip",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": 0
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "status": "completed",
+        "pages": [
+          {
+            "url": "https://supadata.ai",
+            "content": "# Supadata\n## What is Supadata?\nSupadata is an API platform for data extraction for LLM training.",
+            "name": "Supadata: Web & YouTube to text API for developers",
+            "ogUrl": "https://supadata.ai/opengraph-image.png",
+            "countCharacters": 12300
+          }
+        ],
+        "next": "https://api.supadata.ai/v1/web/crawl/123e4567-e89b-12d3-a456-426614174000?skip=10"
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-12",
+    "operationId": "getTranscript",
+    "method": "GET",
+    "path": "/transcript",
+    "signature": "{\"errors\":[\"json\",\"json\",\"json\",\"json\",\"json\",\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":true,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"},{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":false,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\",\"json\",\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "query-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "url",
+        "location": "query",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "https://youtu.be/dQw4w9WgXcQ"
+      },
+      {
+        "name": "lang",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "en"
+      },
+      {
+        "name": "text",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": false
+      },
+      {
+        "name": "chunkSize",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": 1000
+      },
+      {
+        "name": "mode",
+        "location": "query",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "auto"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "content": [
+          {
+            "text": "Never gonna give you up...",
+            "offset": 8150,
+            "duration": 1200,
+            "lang": "en"
+          }
+        ],
+        "lang": "en",
+        "availableLangs": [
+          "en",
+          "es",
+          "zh-TW"
+        ]
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-13",
+    "operationId": "getTranscriptByJobId",
+    "method": "GET",
+    "path": "/transcript/{jobId}",
+    "signature": "{\"errors\":[\"json\",\"json\",\"json\",\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "path-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "jobId",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "jsonContent": false,
+        "value": "job-1"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "status": "completed",
+        "error": {
+          "error": "invalid-request",
+          "message": "Invalid Request",
+          "details": "The request is invalid or malformed",
+          "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+        },
+        "content": [
+          {
+            "text": "Never gonna give you up...",
+            "offset": 8150,
+            "duration": 1200,
+            "lang": "en"
+          }
+        ],
+        "lang": "en",
+        "availableLangs": [
+          "en",
+          "es",
+          "zh-TW"
+        ]
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-14",
+    "operationId": "getMetadata",
+    "method": "GET",
+    "path": "/metadata",
+    "signature": "{\"errors\":[\"json\",\"json\",\"json\",\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":true,\"location\":\"query\",\"required\":true,\"style\":\"form\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "query-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "url",
+        "location": "query",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "jsonContent": false,
+        "value": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "platform": "youtube",
+        "type": "video",
+        "id": "dQw4w9WgXcQ",
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "title": "Amazing Video Title",
+        "description": "Check out this amazing content! #awesome",
+        "author": {
+          "username": "username",
+          "displayName": "John Doe",
+          "avatarUrl": "https://example.com/avatar.jpg",
+          "verified": true
+        },
+        "stats": {
+          "views": 50000,
+          "likes": 5000,
+          "comments": 200,
+          "shares": 100
+        },
+        "media": {
+          "type": "video",
+          "duration": 30,
+          "thumbnailUrl": "https://example.com/thumb.jpg"
+        },
+        "tags": [
+          "funny",
+          "cats",
+          "viral"
+        ],
+        "createdAt": "2024-01-15T10:30:00Z",
+        "additionalData": {
+          "key": null
+        }
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-15",
+    "operationId": "postExtract",
+    "method": "POST",
+    "path": "/extract",
+    "signature": "{\"errors\":[\"json\",\"json\",\"json\",\"json\",\"json\",\"json\"],\"method\":\"POST\",\"nullable\":false,\"pagination\":null,\"parameters\":[],\"request\":[\"json\"],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-request",
+      "json-response"
+    ],
+    "parameters": [],
+    "request": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "prompt": "Extract the main topics discussed and key takeaways",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "topics": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Main topics discussed"
+            },
+            "summary": {
+              "type": "string",
+              "description": "Brief summary of the video"
+            }
+          },
+          "required": [
+            "topics",
+            "summary"
+          ]
+        }
+      }
+    },
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "jobId": "123e4567-e89b-12d3-a456-426614174000"
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-16",
+    "operationId": "getExtractByJobId",
+    "method": "GET",
+    "path": "/extract/{jobId}",
+    "signature": "{\"errors\":[\"json\",\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[{\"array\":false,\"explode\":false,\"location\":\"path\",\"required\":true,\"style\":\"simple\"}],\"request\":[],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response",
+      "path-serialization"
+    ],
+    "parameters": [
+      {
+        "name": "jobId",
+        "location": "path",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "jsonContent": false,
+        "value": "job-1"
+      }
+    ],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "status": "completed",
+        "error": {
+          "error": "invalid-request",
+          "message": "Invalid Request",
+          "details": "The request is invalid or malformed",
+          "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+        },
+        "data": {
+          "topics": [
+            "AI basics",
+            "Machine learning",
+            "Neural networks"
+          ],
+          "summary": "An introduction to artificial intelligence concepts"
+        },
+        "schema": {
+          "type": "object",
+          "properties": {
+            "topics": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "summary": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "topics",
+            "summary"
+          ]
+        }
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  },
+  {
+    "id": "behavior-17",
+    "operationId": "getMe",
+    "method": "GET",
+    "path": "/me",
+    "signature": "{\"errors\":[\"json\",\"json\"],\"method\":\"GET\",\"nullable\":false,\"pagination\":null,\"parameters\":[],\"request\":[],\"response\":[\"json\"],\"security\":[{\"apiKeyAuth\":[]}],\"streaming\":false}",
+    "kinds": [
+      "auth-application",
+      "error-response",
+      "json-response"
+    ],
+    "parameters": [],
+    "request": null,
+    "response": {
+      "mediaType": "application/json",
+      "kind": "json",
+      "value": {
+        "organizationId": "550e8400-e29b-41d4-a716-446655440000",
+        "plan": "Pro",
+        "maxCredits": 100000,
+        "usedCredits": 15000
+      }
+    },
+    "security": [
+      {
+        "apiKeyAuth": []
+      }
+    ],
+    "securitySchemes": [
+      {
+        "name": "apiKeyAuth",
+        "fieldName": "apiKeyAuth",
+        "scheme": {
+          "type": "apiKey",
+          "in": "header",
+          "paramName": "x-api-key"
+        },
+        "genericBearerFieldName": "apiKeyAuth"
+      }
+    ],
+    "pagination": null
+  }
+]

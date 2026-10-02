@@ -1,0 +1,3182 @@
+[
+  {
+    "operationId": "getYoutubeTranscriptTranslate",
+    "summary": "Translates a YouTube video transcript into the language specified by `lang`. Provide the video URL or ID, and optionally select plain-text output or set a chunk size for chunked output.",
+    "method": "GET",
+    "pathTemplate": "/youtube/transcript/translate",
+    "regexSource": "^/youtube/transcript/translate$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "url",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "https://youtu.be/dQw4w9WgXcQ"
+      },
+      {
+        "wireName": "videoId",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "dQw4w9WgXcQ"
+      },
+      {
+        "wireName": "text",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": false
+      },
+      {
+        "wireName": "chunkSize",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": 1000
+      },
+      {
+        "wireName": "lang",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "en"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 26,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 6,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "content": [
+            {
+              "text": "Never gonna give you up...",
+              "offset": 8150,
+              "duration": 1200,
+              "lang": "en"
+            }
+          ],
+          "lang": "es"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      },
+      {
+        "statusCode": "206",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "error": "invalid-request",
+          "message": "Invalid Request",
+          "details": "The request is invalid or malformed",
+          "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "postYoutubeTranscriptBatch",
+    "summary": "Creates an asynchronous batch job to retrieve transcripts for multiple YouTube videos. Supply `videoIds`, `playlistId`, or `channelId` to select the videos; playlist- and channel-based batches include regular videos only, skipping Shorts and live streams.",
+    "method": "POST",
+    "pathTemplate": "/youtube/transcript/batch",
+    "regexSource": "^/youtube/transcript/batch$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 22,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 7,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": false,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "videoIds",
+            "repeated": true,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "playlistId",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "channelId",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "limit",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "lang",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "text",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "videoIds": [
+            "dQw4w9WgXcQ",
+            "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+          ],
+          "playlistId": "https://www.youtube.com/playlist?list=PLlaN88a7y2_plecYoJxvRFTLHVbIVAOoc",
+          "channelId": "https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw",
+          "limit": 20,
+          "lang": "en",
+          "text": false
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "jobId": "123e4567-e89b-12d3-a456-426614174000"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getYoutubePlaylistVideos",
+    "summary": "Lists video IDs from a YouTube playlist identified by its URL or ID. Set `limit` to control the maximum number returned; it defaults to 100 and must be between 1 and 5000.",
+    "method": "GET",
+    "pathTemplate": "/youtube/playlist/videos",
+    "regexSource": "^/youtube/playlist/videos$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "id",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "https://www.youtube.com/playlist?list=PLlaN88a7y2_plecYoJxvRFTLHVbIVAOoc"
+      },
+      {
+        "wireName": "limit",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": 10
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 21,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 2,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "videoIds": [
+            "dQw4w9WgXcQ",
+            "xvFZjo5PgG0"
+          ],
+          "shortIds": [
+            "dQw4w9WgXcQ",
+            "xvFZjo5PgG0"
+          ],
+          "liveIds": [
+            "dQw4w9WgXcQ",
+            "xvFZjo5PgG0"
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getYoutubeChannelVideos",
+    "summary": "Lists video IDs from a YouTube channel identified by its URL, handle, or ID. Use `type` to select all videos, regular videos, Shorts, or live streams, and `limit` to set the maximum number returned.",
+    "method": "GET",
+    "pathTemplate": "/youtube/channel/videos",
+    "regexSource": "^/youtube/channel/videos$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "id",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw"
+      },
+      {
+        "wireName": "limit",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": 10
+      },
+      {
+        "wireName": "type",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "video"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 20,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 4,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "videoIds": [
+            "dQw4w9WgXcQ",
+            "xvFZjo5PgG0"
+          ],
+          "shortIds": [
+            "dQw4w9WgXcQ",
+            "xvFZjo5PgG0"
+          ],
+          "liveIds": [
+            "dQw4w9WgXcQ",
+            "xvFZjo5PgG0"
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "postYoutubeVideoBatch",
+    "summary": "Creates an asynchronous batch job to retrieve metadata for multiple YouTube videos. Supply `videoIds`, `playlistId`, or `channelId` to select the videos; playlist- and channel-based batches include regular videos only, skipping Shorts and live streams.",
+    "method": "POST",
+    "pathTemplate": "/youtube/video/batch",
+    "regexSource": "^/youtube/video/batch$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 3,
+      "parameterSegments": 0,
+      "totalSegments": 3,
+      "staticCharacterCount": 17,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 8,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": false,
+        "bodyShape": "fields",
+        "requiredFields": [],
+        "fields": [
+          {
+            "wireName": "videoIds",
+            "repeated": true,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "playlistId",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "channelId",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "limit",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "videoIds": [
+            "dQw4w9WgXcQ",
+            "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+          ],
+          "playlistId": "https://www.youtube.com/playlist?list=PLlaN88a7y2_plecYoJxvRFTLHVbIVAOoc",
+          "channelId": "https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw",
+          "limit": 20
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "jobId": "123e4567-e89b-12d3-a456-426614174000"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getYoutubeTranscript",
+    "summary": "Retrieves a transcript for a YouTube video, with options for language, chunk size, and plain-text output. Provide the video URL or ID and use `lang` to request a preferred ISO 639-1 language; if that language is unavailable, the first available language is used. This operation is closing down and will be removed on a date not specified.",
+    "method": "GET",
+    "pathTemplate": "/youtube/transcript",
+    "regexSource": "^/youtube/transcript$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "url",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "https://youtu.be/dQw4w9WgXcQ"
+      },
+      {
+        "wireName": "videoId",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "dQw4w9WgXcQ"
+      },
+      {
+        "wireName": "text",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": false
+      },
+      {
+        "wireName": "chunkSize",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": 1000
+      },
+      {
+        "wireName": "lang",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "en"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 2,
+      "parameterSegments": 0,
+      "totalSegments": 2,
+      "staticCharacterCount": 17,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 5,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "content": [
+            {
+              "text": "Never gonna give you up...",
+              "offset": 8150,
+              "duration": 1200,
+              "lang": "en"
+            }
+          ],
+          "lang": "en",
+          "availableLangs": [
+            "en",
+            "es",
+            "zh-TW"
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      },
+      {
+        "statusCode": "206",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "error": "invalid-request",
+          "message": "Invalid Request",
+          "details": "The request is invalid or malformed",
+          "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getYoutubePlaylist",
+    "summary": "Retrieves metadata for a YouTube playlist identified by its URL or ID. Supply `id` in one of the supported YouTube URL formats or as a playlist ID.",
+    "method": "GET",
+    "pathTemplate": "/youtube/playlist",
+    "regexSource": "^/youtube/playlist$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "id",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "https://www.youtube.com/playlist?list=PLlaN88a7y2_plecYoJxvRFTLHVbIVAOoc"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 2,
+      "parameterSegments": 0,
+      "totalSegments": 2,
+      "staticCharacterCount": 15,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 1,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "id": "PLlaN88a7y2_plecYoJxvRFTLHVbIVAOoc",
+          "title": "My Favorite Videos",
+          "description": "A collection of my favorite videos",
+          "videoCount": 25,
+          "viewCount": 1000000,
+          "lastUpdated": "2023-01-01T00:00:00.000Z",
+          "channel": {
+            "id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+            "name": "Rick Astley"
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getYoutubeChannel",
+    "summary": "Retrieves metadata for a YouTube channel identified by its URL, handle, or ID. Supply `id` in one of the supported YouTube URL formats or use the channel's handle or ID.",
+    "method": "GET",
+    "pathTemplate": "/youtube/channel",
+    "regexSource": "^/youtube/channel$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "id",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 2,
+      "parameterSegments": 0,
+      "totalSegments": 2,
+      "staticCharacterCount": 14,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 3,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+          "name": "Rick Astley",
+          "handle": "@RickAstleyYT",
+          "description": "The official Rick Astley YouTube channel",
+          "subscriberCount": 2000000,
+          "videoCount": 100,
+          "viewCount": 1002293434,
+          "thumbnail": "https://yt3.ggpht.com/...",
+          "banner": "https://yt3.ggpht.com/..."
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getYoutubeSearch",
+    "summary": "Searches YouTube for videos, channels, and playlists. Use `query` with optional filters such as `type`, `uploadDate`, `duration`, `sortBy`, and `features` to refine results. Use `nextPageToken` to fetch another page; when you provide `limit`, the API paginates automatically.",
+    "method": "GET",
+    "pathTemplate": "/youtube/search",
+    "regexSource": "^/youtube/search$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "query",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "Never Gonna Give You Up"
+      },
+      {
+        "wireName": "uploadDate",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "month"
+      },
+      {
+        "wireName": "type",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "video"
+      },
+      {
+        "wireName": "duration",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "medium"
+      },
+      {
+        "wireName": "sortBy",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "views"
+      },
+      {
+        "wireName": "features",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": true,
+        "jsonContent": false,
+        "shape": "array",
+        "members": [],
+        "example": [
+          "hd",
+          "subtitles",
+          "creative-commons"
+        ]
+      },
+      {
+        "wireName": "limit",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": 50
+      },
+      {
+        "wireName": "nextPageToken",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "eyJxdWVyeSI6IlJpY2sgQXN0bGV5IiwiZmlsdGVycyI6e319"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 2,
+      "parameterSegments": 0,
+      "totalSegments": 2,
+      "staticCharacterCount": 13,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 10,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "query": "Rick Astley Never Gonna Give You Up",
+          "results": [
+            {
+              "type": "video",
+              "id": "dQw4w9WgXcQ",
+              "title": "Rick Astley - Never Gonna Give You Up (Official Video)",
+              "description": "The official music video for Rick Astley...",
+              "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+              "duration": 213,
+              "viewCount": 1234567890,
+              "uploadDate": "2009-10-25T00:00:00.000Z",
+              "channel": {
+                "id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+                "name": "Rick Astley",
+                "thumbnail": "https://yt3.ggpht.com/..."
+              },
+              "handle": "@RickAstleyYT",
+              "videoCount": 100
+            }
+          ],
+          "totalResults": 1000000,
+          "nextPageToken": "eyJxdWVyeSI6IlJpY2sgQXN0bGV5IiwiZmlsdGVycyI6e319"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getYoutubeVideo",
+    "summary": "Retrieves metadata for a YouTube video identified by its URL or ID. Supply `id` in one of the supported YouTube URL formats or as a video ID. This operation is closing down and will be removed on a date not specified.",
+    "method": "GET",
+    "pathTemplate": "/youtube/video",
+    "regexSource": "^/youtube/video$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "id",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "https://youtu.be/dQw4w9WgXcQ"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 2,
+      "parameterSegments": 0,
+      "totalSegments": 2,
+      "staticCharacterCount": 12,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 0,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "id": "dQw4w9WgXcQ",
+          "title": "Rick Astley - Never Gonna Give You Up (Official Music Video)",
+          "description": "The official music video for \"Never Gonna Give You Up\"...",
+          "duration": 213,
+          "channel": {
+            "id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+            "name": "Rick Astley"
+          },
+          "tags": [
+            "Rick Astley",
+            "Official Video",
+            "Music"
+          ],
+          "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+          "uploadDate": "2009-10-25T00:00:00.000Z",
+          "viewCount": 1234567890,
+          "likeCount": 12345678,
+          "transcriptLanguages": [
+            "en",
+            "es",
+            "fr"
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getWebScrape",
+    "summary": "Extracts webpage content as Markdown from a URL. Use `noLinks` to strip Markdown links and `lang` to request a preferred language using an ISO 639-1 code. The response also includes webpage metadata and URLs found on the page.",
+    "method": "GET",
+    "pathTemplate": "/web/scrape",
+    "regexSource": "^/web/scrape$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "url",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "https://supadata.ai"
+      },
+      {
+        "wireName": "noLinks",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": false
+      },
+      {
+        "wireName": "lang",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "en"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 2,
+      "parameterSegments": 0,
+      "totalSegments": 2,
+      "staticCharacterCount": 9,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 11,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "url": "https://supadata.ai",
+          "content": "# Supadata\n## What is Supadata?\nSupadata is an API platform for data extraction for LLM training.",
+          "name": "Supadata: Web & YouTube to text API for developers",
+          "description": "Supadata is one stop-shop API for developers to read web and YouTube content, ready for AI training and retrieval.",
+          "ogUrl": "https://supadata.ai/opengraph-image.png",
+          "countCharacters": 12300,
+          "urls": [
+            "https://supadata.ai",
+            "https://docs.supadata.ai"
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "401": [
+        {
+          "statusCode": "401",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "403": [
+        {
+          "statusCode": "403",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "429": [
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "postWebCrawl",
+    "summary": "Submits a crawl job to extract content from pages on a website. Provide `url` as a URI and optionally set `limit` to cap the number of pages crawled; the default limit is 100. Use GET /web/crawl/{jobId} with the returned job ID to retrieve the crawl status and results.",
+    "method": "POST",
+    "pathTemplate": "/web/crawl",
+    "regexSource": "^/web/crawl$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 2,
+      "parameterSegments": 0,
+      "totalSegments": 2,
+      "staticCharacterCount": 8,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 13,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": false,
+        "bodyShape": "fields",
+        "requiredFields": [
+          "url"
+        ],
+        "fields": [
+          {
+            "wireName": "url",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "limit",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "url": "https://supadata.ai",
+          "limit": 100
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "jobId": "123e4567-e89b-12d3-a456-426614174000"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "429": [
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getWebMap",
+    "summary": "Extracts links found across a website starting from a supplied URL. Provide `url` to identify the website to map. The response contains the discovered URLs.",
+    "method": "GET",
+    "pathTemplate": "/web/map",
+    "regexSource": "^/web/map$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "url",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "https://supadata.ai"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 2,
+      "parameterSegments": 0,
+      "totalSegments": 2,
+      "staticCharacterCount": 6,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 12,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "urls": [
+            "https://supadata.ai",
+            "https://docs.supadata.ai"
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "429": [
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getYoutubeBatchByJobId",
+    "summary": "Retrieves the status and results of a YouTube batch job identified by `jobId`. Use `limit` and `offset` to page through completed results in submission order, or omit both to receive all results in one streamed response.",
+    "method": "GET",
+    "pathTemplate": "/youtube/batch/{jobId}",
+    "regexSource": "^/youtube/batch/(?<sdkPath0>[^/]+)$",
+    "pathParams": [
+      "jobId"
+    ],
+    "pathParameters": [
+      {
+        "wireName": "jobId",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "job-1",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [
+      {
+        "wireName": "limit",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": 1
+      },
+      {
+        "wireName": "offset",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": 0
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 2,
+      "parameterSegments": 1,
+      "totalSegments": 3,
+      "staticCharacterCount": 12,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 9,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "status": "completed",
+          "errorCode": "job-expired",
+          "results": [
+            {
+              "videoId": "dQw4w9WgXcQ",
+              "transcript": {
+                "content": [
+                  {
+                    "text": "Never gonna give you up...",
+                    "offset": 8150,
+                    "duration": 1200,
+                    "lang": "en"
+                  }
+                ],
+                "lang": "en",
+                "availableLangs": [
+                  "en",
+                  "es",
+                  "zh-TW"
+                ]
+              },
+              "video": {
+                "id": "dQw4w9WgXcQ",
+                "title": "Rick Astley - Never Gonna Give You Up (Official Music Video)",
+                "description": "The official music video for \"Never Gonna Give You Up\"...",
+                "duration": 213,
+                "channel": {
+                  "id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+                  "name": "Rick Astley"
+                },
+                "tags": [
+                  "Rick Astley",
+                  "Official Video",
+                  "Music"
+                ],
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "uploadDate": "2009-10-25T00:00:00.000Z",
+                "viewCount": 1234567890,
+                "likeCount": 12345678,
+                "transcriptLanguages": [
+                  "en",
+                  "es",
+                  "fr"
+                ]
+              },
+              "errorCode": "not-found"
+            }
+          ],
+          "stats": {
+            "total": 10,
+            "succeeded": 8,
+            "failed": 2
+          },
+          "completedAt": "2025-04-03T06:59:53.428Z"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getWebCrawlByJobId",
+    "summary": "Retrieves the status and results of a website crawl job. Use `jobId` to identify the crawl and `skip` to request results starting at an offset. The response includes crawled pages when the job is completed and a `next` URL when more results are available.",
+    "method": "GET",
+    "pathTemplate": "/web/crawl/{jobId}",
+    "regexSource": "^/web/crawl/(?<sdkPath0>[^/]+)$",
+    "pathParams": [
+      "jobId"
+    ],
+    "pathParameters": [
+      {
+        "wireName": "jobId",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "job-1",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [
+      {
+        "wireName": "skip",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": 0
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 2,
+      "parameterSegments": 1,
+      "totalSegments": 3,
+      "staticCharacterCount": 8,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 14,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "status": "completed",
+          "pages": [
+            {
+              "url": "https://supadata.ai",
+              "content": "# Supadata\n## What is Supadata?\nSupadata is an API platform for data extraction for LLM training.",
+              "name": "Supadata: Web & YouTube to text API for developers",
+              "ogUrl": "https://supadata.ai/opengraph-image.png",
+              "countCharacters": 12300
+            }
+          ],
+          "next": "https://api.supadata.ai/v1/web/crawl/123e4567-e89b-12d3-a456-426614174000?skip=10"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getTranscript",
+    "summary": "Retrieves a transcript for a video from a supported platform or a direct media file URL. Set `lang`, `text`, `chunkSize`, and `mode` to control the transcript language, format, chunking, and retrieval or generation behavior. For asynchronous processing, use GET /transcript/{jobId} with the returned job ID to check the result.",
+    "method": "GET",
+    "pathTemplate": "/transcript",
+    "regexSource": "^/transcript$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "url",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "https://youtu.be/dQw4w9WgXcQ"
+      },
+      {
+        "wireName": "lang",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "en"
+      },
+      {
+        "wireName": "text",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": false
+      },
+      {
+        "wireName": "chunkSize",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": 1000
+      },
+      {
+        "wireName": "mode",
+        "required": false,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "auto"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 1,
+      "parameterSegments": 0,
+      "totalSegments": 1,
+      "staticCharacterCount": 10,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 15,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "content": [
+            {
+              "text": "Never gonna give you up...",
+              "offset": 8150,
+              "duration": 1200,
+              "lang": "en"
+            }
+          ],
+          "lang": "en",
+          "availableLangs": [
+            "en",
+            "es",
+            "zh-TW"
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      },
+      {
+        "statusCode": "202",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "content": [
+            {
+              "text": "Never gonna give you up...",
+              "offset": 8150,
+              "duration": 1200,
+              "lang": "en"
+            }
+          ],
+          "lang": "en",
+          "availableLangs": [
+            "en",
+            "es",
+            "zh-TW"
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      },
+      {
+        "statusCode": "206",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "error": "invalid-request",
+          "message": "Invalid Request",
+          "details": "The request is invalid or malformed",
+          "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "401": [
+        {
+          "statusCode": "401",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "402": [
+        {
+          "statusCode": "402",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "403": [
+        {
+          "statusCode": "403",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "429": [
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getMetadata",
+    "summary": "Retrieves unified metadata for media hosted on supported internet platforms. Provide `url` as a URI for media such as YouTube videos, TikTok videos, Instagram posts, Twitter/X posts, or Facebook videos. The response includes platform and media identifiers, with available details about the author, media, and engagement.",
+    "method": "GET",
+    "pathTemplate": "/metadata",
+    "regexSource": "^/metadata$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [
+      {
+        "wireName": "url",
+        "required": true,
+        "style": "form",
+        "explode": true,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      }
+    ],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 1,
+      "parameterSegments": 0,
+      "totalSegments": 1,
+      "staticCharacterCount": 8,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 17,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "platform": "youtube",
+          "type": "video",
+          "id": "dQw4w9WgXcQ",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "title": "Amazing Video Title",
+          "description": "Check out this amazing content! #awesome",
+          "author": {
+            "username": "username",
+            "displayName": "John Doe",
+            "avatarUrl": "https://example.com/avatar.jpg",
+            "verified": true
+          },
+          "stats": {
+            "views": 50000,
+            "likes": 5000,
+            "comments": 200,
+            "shares": 100
+          },
+          "media": {
+            "type": "video",
+            "duration": 30,
+            "thumbnailUrl": "https://example.com/thumb.jpg"
+          },
+          "tags": [
+            "funny",
+            "cats",
+            "viral"
+          ],
+          "createdAt": "2024-01-15T10:30:00Z",
+          "additionalData": {
+            "key": null
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "401": [
+        {
+          "statusCode": "401",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "429": [
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "postExtract",
+    "summary": "Use AI to analyze video content and extract structured data. Provide either a prompt describing what to extract, a JSON Schema for the output format, or both. Supports YouTube, TikTok, Instagram, Twitter/X, and Facebook videos, or a direct media file URL. Returns a job ID for asynchronous processing. Use the `/extract/:jobId` endpoint to poll for results.",
+    "method": "POST",
+    "pathTemplate": "/extract",
+    "regexSource": "^/extract$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 1,
+      "parameterSegments": 0,
+      "totalSegments": 1,
+      "staticCharacterCount": 7,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 18,
+    "requestModes": [
+      {
+        "mediaType": "application/json",
+        "encoderKind": "json",
+        "required": false,
+        "bodyShape": "fields",
+        "requiredFields": [
+          "url"
+        ],
+        "fields": [
+          {
+            "wireName": "url",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "prompt",
+            "repeated": false,
+            "partKind": "scalar",
+            "contentType": null
+          },
+          {
+            "wireName": "schema",
+            "repeated": false,
+            "partKind": "json",
+            "contentType": null
+          }
+        ],
+        "example": {
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "prompt": "Extract the main topics discussed and key takeaways",
+          "schema": {
+            "type": "object",
+            "properties": {
+              "topics": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                },
+                "description": "Main topics discussed"
+              },
+              "summary": {
+                "type": "string",
+                "description": "Brief summary of the video"
+              }
+            },
+            "required": [
+              "topics",
+              "summary"
+            ]
+          }
+        }
+      }
+    ],
+    "responseModes": [
+      {
+        "statusCode": "202",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "jobId": "123e4567-e89b-12d3-a456-426614174000"
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "401": [
+        {
+          "statusCode": "401",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "403": [
+        {
+          "statusCode": "403",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "429": [
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getMe",
+    "summary": "Retrieve organization details, plan information, and credit usage.",
+    "method": "GET",
+    "pathTemplate": "/me",
+    "regexSource": "^/me$",
+    "pathParams": [],
+    "pathParameters": [],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 1,
+      "parameterSegments": 0,
+      "totalSegments": 1,
+      "staticCharacterCount": 2,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 20,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "organizationId": "550e8400-e29b-41d4-a716-446655440000",
+          "plan": "Pro",
+          "maxCredits": 100000,
+          "usedCredits": 15000
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "401": [
+        {
+          "statusCode": "401",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getTranscriptByJobId",
+    "summary": "Retrieves the status and results of a transcript job. Use `jobId` to identify the job and check whether it is queued, active, completed, or failed. Completed results may include transcript content, its language, and available language codes.",
+    "method": "GET",
+    "pathTemplate": "/transcript/{jobId}",
+    "regexSource": "^/transcript/(?<sdkPath0>[^/]+)$",
+    "pathParams": [
+      "jobId"
+    ],
+    "pathParameters": [
+      {
+        "wireName": "jobId",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "job-1",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 1,
+      "parameterSegments": 1,
+      "totalSegments": 2,
+      "staticCharacterCount": 10,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 16,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "status": "completed",
+          "error": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "content": [
+            {
+              "text": "Never gonna give you up...",
+              "offset": 8150,
+              "duration": 1200,
+              "lang": "en"
+            }
+          ],
+          "lang": "en",
+          "availableLangs": [
+            "en",
+            "es",
+            "zh-TW"
+          ]
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "401": [
+        {
+          "statusCode": "401",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "429": [
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  },
+  {
+    "operationId": "getExtractByJobId",
+    "summary": "Retrieves the status and results of an extract job. Use `jobId` to identify the job and check whether it is queued, active, completed, or failed. Completed results include extracted data and may include a generated JSON Schema when the request did not provide one.",
+    "method": "GET",
+    "pathTemplate": "/extract/{jobId}",
+    "regexSource": "^/extract/(?<sdkPath0>[^/]+)$",
+    "pathParams": [
+      "jobId"
+    ],
+    "pathParameters": [
+      {
+        "wireName": "jobId",
+        "required": true,
+        "style": "simple",
+        "explode": false,
+        "allowReserved": false,
+        "isArray": false,
+        "jsonContent": false,
+        "shape": "scalar",
+        "members": [],
+        "example": "job-1",
+        "routeRepresentative": "sdk-route-1"
+      }
+    ],
+    "queryParameters": [],
+    "literalQuery": [],
+    "headerParameters": [],
+    "cookieParameters": [],
+    "specificity": {
+      "staticSegments": 1,
+      "parameterSegments": 1,
+      "totalSegments": 2,
+      "staticCharacterCount": 7,
+      "constrainedParameters": 0,
+      "literalQueryParameters": 0
+    },
+    "originalIndex": 19,
+    "requestModes": [],
+    "responseModes": [
+      {
+        "statusCode": "200",
+        "mediaType": "application/json",
+        "decoderKind": "json",
+        "example": {
+          "status": "completed",
+          "error": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "data": {
+            "topics": [
+              "AI basics",
+              "Machine learning",
+              "Neural networks"
+            ],
+            "summary": "An introduction to artificial intelligence concepts"
+          },
+          "schema": {
+            "type": "object",
+            "properties": {
+              "topics": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "summary": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "topics",
+              "summary"
+            ]
+          }
+        },
+        "bodyBase64": null,
+        "exampleSource": "synthesized",
+        "authoredExampleSource": "none",
+        "hasAuthoredExample": false
+      }
+    ],
+    "defaultResponseIndex": 0,
+    "streamSelector": null,
+    "errorResponses": {
+      "400": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "404": [
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ],
+      "500": [
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "example": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "bodyBase64": null,
+          "exampleSource": "synthesized",
+          "authoredExampleSource": "none",
+          "hasAuthoredExample": false
+        }
+      ]
+    }
+  }
+]

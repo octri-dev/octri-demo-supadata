@@ -1,0 +1,9 @@
+{
+  "mode": "synthetic fixture, offline HTTP mock; no live API calls",
+  "schema_validation": "passed",
+  "official_python_model": "Metadata.__init__() missing 1 required positional argument: 'url'",
+  "octri_python_client": "accepted the schema-valid response",
+  "requests_intercepted": [
+    "https://api.supadata.ai/v1/metadata?url=https%3A%2F%2Fwww.tiktok.com%2F%40demo%2Fvideo%2F123"
+  ]
+}

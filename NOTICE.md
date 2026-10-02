@@ -1,0 +1,1 @@
+This is an unofficial evaluation demo created by Octri. Product names belong to their respective owners. Generated SDKs and upstream source retain their original license files. The public API specification is included as a source snapshot for reproducibility; no ownership of that specification is claimed. Demo code is licensed under the MIT license below.

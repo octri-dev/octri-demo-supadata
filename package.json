@@ -1,0 +1,11 @@
+{
+  "name": "octri-demo-supadata",
+  "private": true,
+  "scripts": {
+    "check:typescript": "node demos/check-typescript.cjs"
+  },
+  "devDependencies": {
+    "typescript": "5.9.3",
+    "@types/node": "20.19.17"
+  }
+}

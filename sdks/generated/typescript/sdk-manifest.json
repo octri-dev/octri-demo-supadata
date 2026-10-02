@@ -1,0 +1,6465 @@
+{
+  "schemaTitle": "Supadata",
+  "schemaVersion": "1.3.0",
+  "language": "typescript",
+  "enumStrategy": "open",
+  "unitTests": "include",
+  "operations": [
+    {
+      "id": "getExtractByJobId",
+      "wireOperationId": "getExtractByJobId",
+      "method": "get",
+      "path": "/extract/{jobId}",
+      "namespace": ["extract"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getExtractByJobId"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/ExtractJobResult",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ExtractJobResult",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "jobId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "jobId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "getMe",
+      "wireOperationId": "getMe",
+      "method": "get",
+      "path": "/me",
+      "namespace": ["account"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getMe"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Me",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Me",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "401",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [],
+      "bindings": []
+    },
+    {
+      "id": "getMetadata",
+      "wireOperationId": "getMetadata",
+      "method": "get",
+      "path": "/metadata",
+      "namespace": ["metadata"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getMetadata"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Metadata",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Metadata",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "401",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "url",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "url",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "getTranscript",
+      "wireOperationId": "getTranscript",
+      "method": "get",
+      "path": "/transcript",
+      "namespace": ["transcript"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getTranscript"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/TranscriptOrJobId",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "TranscriptOrJobId",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": [
+              {
+                "type": "ref",
+                "format": null,
+                "ref": "Transcript",
+                "nullable": false,
+                "items": null,
+                "mapValue": null,
+                "variants": null
+              },
+              {
+                "type": "ref",
+                "format": null,
+                "ref": "JobId",
+                "nullable": false,
+                "items": null,
+                "mapValue": null,
+                "variants": null
+              }
+            ]
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "202",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/TranscriptOrJobId",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "TranscriptOrJobId",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": [
+              {
+                "type": "ref",
+                "format": null,
+                "ref": "Transcript",
+                "nullable": false,
+                "items": null,
+                "mapValue": null,
+                "variants": null
+              },
+              {
+                "type": "ref",
+                "format": null,
+                "ref": "JobId",
+                "nullable": false,
+                "items": null,
+                "mapValue": null,
+                "variants": null
+              }
+            ]
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "206",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "401",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "402",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "403",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "chunkSize",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "mode",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": "native",
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "text",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "url",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "url",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "text",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "chunkSize",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "mode",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": "native",
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "getTranscriptByJobId",
+      "wireOperationId": "getTranscriptByJobId",
+      "method": "get",
+      "path": "/transcript/{jobId}",
+      "namespace": ["transcript"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getTranscriptByJobId"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/JobResult",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "JobResult",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "401",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "jobId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ],
+      "bindings": [
+        {
+          "name": "jobId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        }
+      ]
+    },
+    {
+      "id": "getWebCrawlByJobId",
+      "wireOperationId": "getWebCrawlByJobId",
+      "method": "get",
+      "path": "/web/crawl/{jobId}",
+      "namespace": ["crawl"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getWebCrawlByJobId"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/CrawlJob",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "CrawlJob",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "jobId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "skip",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "jobId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "skip",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "getWebMap",
+      "wireOperationId": "getWebMap",
+      "method": "get",
+      "path": "/web/map",
+      "namespace": ["map"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getWebMap"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/MapModel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "MapModel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "url",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "url",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "getWebScrape",
+      "wireOperationId": "getWebScrape",
+      "method": "get",
+      "path": "/web/scrape",
+      "namespace": ["scrape"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getWebScrape"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Scrape",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Scrape",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "401",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "403",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "noLinks",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "url",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "url",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "noLinks",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "getYoutubeBatchByJobId",
+      "wireOperationId": "getYoutubeBatchByJobId",
+      "method": "get",
+      "path": "/youtube/batch/{jobId}",
+      "namespace": ["batch"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getYoutubeBatchByJobId"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/YouTubeBatchResults",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "YouTubeBatchResults",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "jobId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "wireType": "integer",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "offset",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "wireType": "integer",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "jobId",
+          "in": "path",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "simple",
+          "explode": false
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "wireType": "integer",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "offset",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "integer",
+          "wireType": "integer",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "getYoutubeChannel",
+      "wireOperationId": "getYoutubeChannel",
+      "method": "get",
+      "path": "/youtube/channel",
+      "namespace": ["channel"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getYoutubeChannel"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/YoutubeChannel",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "YoutubeChannel",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "getYoutubeChannelVideos",
+      "wireOperationId": "getYoutubeChannelVideos",
+      "method": "get",
+      "path": "/youtube/channel/videos",
+      "namespace": ["videos"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getYoutubeChannelVideos"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/VideoIds",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "VideoIds",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "type",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": "all",
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "type",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": "all",
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "getYoutubePlaylist",
+      "wireOperationId": "getYoutubePlaylist",
+      "method": "get",
+      "path": "/youtube/playlist",
+      "namespace": ["playlist"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getYoutubePlaylist"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/YoutubePlaylist",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "YoutubePlaylist",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "getYoutubePlaylistVideos",
+      "wireOperationId": "getYoutubePlaylistVideos",
+      "method": "get",
+      "path": "/youtube/playlist/videos",
+      "namespace": ["videos"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getYoutubePlaylistVideos"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/VideoIds",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "VideoIds",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "getYoutubeSearch",
+      "wireOperationId": "getYoutubeSearch",
+      "method": "get",
+      "path": "/youtube/search",
+      "namespace": ["search"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getYoutubeSearch"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/YoutubeSearch",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "YoutubeSearch",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "duration",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": "all",
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "features",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "nextPageToken",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "query",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "sortBy",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": "relevance",
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "type",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": "all",
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "uploadDate",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": "all",
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "query",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "uploadDate",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": "all",
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "type",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": "all",
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "duration",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": "all",
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "sortBy",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": "relevance",
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "features",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "limit",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "nextPageToken",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "getYoutubeTranscript",
+      "wireOperationId": "getYoutubeTranscript",
+      "method": "get",
+      "path": "/youtube/transcript",
+      "namespace": ["transcript"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getYoutubeTranscript"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Transcript",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Transcript",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "206",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "chunkSize",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "text",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "url",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "videoId",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "url",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "videoId",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "text",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "chunkSize",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "getYoutubeTranscriptTranslate",
+      "wireOperationId": "getYoutubeTranscriptTranslate",
+      "method": "get",
+      "path": "/youtube/transcript/translate",
+      "namespace": ["translate"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getYoutubeTranscriptTranslate"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/TranslatedTranscript",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "TranslatedTranscript",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "206",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "chunkSize",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "lang",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "text",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "url",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "videoId",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "lang",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "url",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "videoId",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "text",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        },
+        {
+          "name": "chunkSize",
+          "in": "query",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "getYoutubeVideo",
+      "wireOperationId": "getYoutubeVideo",
+      "method": "get",
+      "path": "/youtube/video",
+      "namespace": ["video"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": null,
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "getYoutubeVideo"
+        }
+      ],
+      "requestModes": [],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/YoutubeVideo",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "YoutubeVideo",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ],
+      "bindings": [
+        {
+          "name": "id",
+          "in": "query",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "style": "form",
+          "explode": true
+        }
+      ]
+    },
+    {
+      "id": "postExtract",
+      "wireOperationId": "postExtract",
+      "method": "post",
+      "path": "/extract",
+      "namespace": ["extract"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "postExtract"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": "#/components/schemas/ExtractRequest",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "ExtractRequest",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "url",
+              "required": true,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "prompt",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "schema",
+              "required": false,
+              "repeated": false,
+              "partKind": "json",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "202",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/JobId",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "JobId",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "401",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "403",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "prompt",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "schema",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "object",
+          "wireType": "object",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "url",
+          "in": "body",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "url",
+          "in": "body",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "prompt",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "schema",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "object",
+          "wireType": "object",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "postWebCrawl",
+      "wireOperationId": "postWebCrawl",
+      "method": "post",
+      "path": "/web/crawl",
+      "namespace": ["crawl"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "postWebCrawl"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": null,
+          "schemaType": {
+            "type": "object",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "url",
+              "required": true,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "limit",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/JobId",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "JobId",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "429",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "limit",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "url",
+          "in": "body",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "url",
+          "in": "body",
+          "required": true,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "limit",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "postYoutubeTranscriptBatch",
+      "wireOperationId": "postYoutubeTranscriptBatch",
+      "method": "post",
+      "path": "/youtube/transcript/batch",
+      "namespace": ["batch"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "postYoutubeTranscriptBatch"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": null,
+          "schemaType": {
+            "type": "object",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": [
+              {
+                "type": "any",
+                "format": null,
+                "ref": null,
+                "nullable": false,
+                "items": null,
+                "mapValue": null,
+                "variants": null
+              },
+              {
+                "type": "any",
+                "format": null,
+                "ref": null,
+                "nullable": false,
+                "items": null,
+                "mapValue": null,
+                "variants": null
+              },
+              {
+                "type": "any",
+                "format": null,
+                "ref": null,
+                "nullable": false,
+                "items": null,
+                "mapValue": null,
+                "variants": null
+              }
+            ]
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "videoIds",
+              "required": false,
+              "repeated": true,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "playlistId",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "channelId",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "limit",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "lang",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "text",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/JobId",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "JobId",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "channelId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "lang",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "limit",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "playlistId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "text",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "videoIds",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "videoIds",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "playlistId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "channelId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "limit",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "lang",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "text",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "boolean",
+          "wireType": "boolean",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    },
+    {
+      "id": "postYoutubeVideoBatch",
+      "wireOperationId": "postYoutubeVideoBatch",
+      "method": "post",
+      "path": "/youtube/video/batch",
+      "namespace": ["batch"],
+      "streams": false,
+      "mode": "normal",
+      "streamSelector": null,
+      "requestMediaType": "application/json",
+      "publicMethods": [
+        {
+          "mode": "normal",
+          "name": "postYoutubeVideoBatch"
+        }
+      ],
+      "requestModes": [
+        {
+          "mediaType": "application/json",
+          "encoderKind": "json",
+          "schemaRef": null,
+          "schemaType": {
+            "type": "object",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": [
+              {
+                "type": "any",
+                "format": null,
+                "ref": null,
+                "nullable": false,
+                "items": null,
+                "mapValue": null,
+                "variants": null
+              },
+              {
+                "type": "any",
+                "format": null,
+                "ref": null,
+                "nullable": false,
+                "items": null,
+                "mapValue": null,
+                "variants": null
+              },
+              {
+                "type": "any",
+                "format": null,
+                "ref": null,
+                "nullable": false,
+                "items": null,
+                "mapValue": null,
+                "variants": null
+              }
+            ]
+          },
+          "bodyShape": "fields",
+          "fields": [
+            {
+              "name": "videoIds",
+              "required": false,
+              "repeated": true,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "playlistId",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "channelId",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            },
+            {
+              "name": "limit",
+              "required": false,
+              "repeated": false,
+              "partKind": "scalar",
+              "contentType": null
+            }
+          ]
+        }
+      ],
+      "responseModes": [
+        {
+          "statusCode": "200",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/JobId",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "JobId",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "errorResponseModes": [
+        {
+          "statusCode": "400",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "404",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        },
+        {
+          "statusCode": "500",
+          "mediaType": "application/json",
+          "decoderKind": "json",
+          "schemaRef": "#/components/schemas/Error2",
+          "schemaType": {
+            "type": "ref",
+            "format": null,
+            "ref": "Error2",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "hasAuthoredExample": false,
+          "authoredExampleSource": "none"
+        }
+      ],
+      "params": [
+        {
+          "name": "channelId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "limit",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "playlistId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "videoIds",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ],
+      "bindings": [
+        {
+          "name": "videoIds",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "array",
+          "wireType": "array",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "playlistId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "channelId",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "string",
+          "wireType": "string",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        },
+        {
+          "name": "limit",
+          "in": "body",
+          "required": false,
+          "nullable": false,
+          "type": "number",
+          "wireType": "number",
+          "declaredValue": null,
+          "mediaTypes": ["application/json"]
+        }
+      ]
+    }
+  ],
+  "models": [
+    {
+      "name": "CrawlJob",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "next",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "pages",
+          "required": false,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "object",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "status",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "Error2",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "details",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "documentationUrl",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "error",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "message",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "ExtractJobResult",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "data",
+          "required": false,
+          "type": "object",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": {
+            "type": "any",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "variants": null
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "oneOf",
+          "format": null,
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": [
+            {
+              "type": "ref",
+              "format": null,
+              "ref": "Error2",
+              "nullable": false,
+              "items": null,
+              "mapValue": null,
+              "variants": null
+            }
+          ]
+        },
+        {
+          "name": "schema",
+          "required": false,
+          "type": "object",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": {
+            "type": "any",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "variants": null
+        },
+        {
+          "name": "status",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "ExtractRequest",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "prompt",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "schema",
+          "required": false,
+          "type": "object",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": {
+            "type": "any",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "variants": null
+        },
+        {
+          "name": "url",
+          "required": true,
+          "type": "string",
+          "format": "uri",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "JobId",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "jobId",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "JobResult",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "availableLangs",
+          "required": false,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "content",
+          "required": false,
+          "type": "anyOf",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": [
+            {
+              "type": "array",
+              "format": null,
+              "ref": null,
+              "nullable": false,
+              "items": {
+                "type": "ref",
+                "format": null,
+                "ref": "TranscriptChunk",
+                "nullable": false,
+                "items": null,
+                "mapValue": null,
+                "variants": null
+              },
+              "mapValue": null,
+              "variants": null
+            },
+            {
+              "type": "string",
+              "format": null,
+              "ref": null,
+              "nullable": false,
+              "items": null,
+              "mapValue": null,
+              "variants": null
+            }
+          ]
+        },
+        {
+          "name": "error",
+          "required": false,
+          "type": "oneOf",
+          "format": null,
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": [
+            {
+              "type": "ref",
+              "format": null,
+              "ref": "Error2",
+              "nullable": false,
+              "items": null,
+              "mapValue": null,
+              "variants": null
+            }
+          ]
+        },
+        {
+          "name": "lang",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "status",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "MapModel",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "urls",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "Me",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "maxCredits",
+          "required": true,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "organizationId",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "plan",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "usedCredits",
+          "required": true,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "MediaType",
+      "kind": "enum",
+      "values": ["video", "image", "carousel", "post"],
+      "type": {
+        "type": "string",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": []
+    },
+    {
+      "name": "Metadata",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "additionalData",
+          "required": false,
+          "type": "object",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": {
+            "type": "any",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "variants": null
+        },
+        {
+          "name": "author",
+          "required": false,
+          "type": "object",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "createdAt",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "media",
+          "required": false,
+          "type": "oneOf",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": [
+            {
+              "type": "object",
+              "format": null,
+              "ref": null,
+              "nullable": false,
+              "items": null,
+              "mapValue": null,
+              "variants": null
+            },
+            {
+              "type": "object",
+              "format": null,
+              "ref": null,
+              "nullable": false,
+              "items": null,
+              "mapValue": null,
+              "variants": null
+            },
+            {
+              "type": "object",
+              "format": null,
+              "ref": null,
+              "nullable": false,
+              "items": null,
+              "mapValue": null,
+              "variants": null
+            },
+            {
+              "type": "object",
+              "format": null,
+              "ref": null,
+              "nullable": false,
+              "items": null,
+              "mapValue": null,
+              "variants": null
+            }
+          ]
+        },
+        {
+          "name": "platform",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "stats",
+          "required": false,
+          "type": "object",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "tags",
+          "required": false,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "title",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "type",
+          "required": true,
+          "type": "any",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "url",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "MetadataQuery",
+      "kind": "alias",
+      "type": {
+        "type": "string",
+        "format": "uri",
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [],
+      "values": []
+    },
+    {
+      "name": "Scrape",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "content",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "countCharacters",
+          "required": true,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "name",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "ogUrl",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "url",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "urls",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "Transcript",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "availableLangs",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "content",
+          "required": true,
+          "type": "anyOf",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": [
+            {
+              "type": "array",
+              "format": null,
+              "ref": null,
+              "nullable": false,
+              "items": {
+                "type": "ref",
+                "format": null,
+                "ref": "TranscriptChunk",
+                "nullable": false,
+                "items": null,
+                "mapValue": null,
+                "variants": null
+              },
+              "mapValue": null,
+              "variants": null
+            },
+            {
+              "type": "string",
+              "format": null,
+              "ref": null,
+              "nullable": false,
+              "items": null,
+              "mapValue": null,
+              "variants": null
+            }
+          ]
+        },
+        {
+          "name": "lang",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "TranscriptChunk",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "duration",
+          "required": true,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "lang",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "offset",
+          "required": true,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "text",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "TranscriptOrJobId",
+      "kind": "union",
+      "type": {
+        "type": "anyOf",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": [
+          {
+            "type": "ref",
+            "format": null,
+            "ref": "Transcript",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          {
+            "type": "ref",
+            "format": null,
+            "ref": "JobId",
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          }
+        ]
+      },
+      "properties": [],
+      "values": []
+    },
+    {
+      "name": "TranslatedTranscript",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "content",
+          "required": true,
+          "type": "anyOf",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": [
+            {
+              "type": "array",
+              "format": null,
+              "ref": null,
+              "nullable": false,
+              "items": {
+                "type": "ref",
+                "format": null,
+                "ref": "TranscriptChunk",
+                "nullable": false,
+                "items": null,
+                "mapValue": null,
+                "variants": null
+              },
+              "mapValue": null,
+              "variants": null
+            },
+            {
+              "type": "string",
+              "format": null,
+              "ref": null,
+              "nullable": false,
+              "items": null,
+              "mapValue": null,
+              "variants": null
+            }
+          ]
+        },
+        {
+          "name": "lang",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "UrlQuery",
+      "kind": "alias",
+      "type": {
+        "type": "string",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [],
+      "values": []
+    },
+    {
+      "name": "VideoIds",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "liveIds",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "shortIds",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "videoIds",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "YouTubeBatchResults",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "completedAt",
+          "required": false,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "errorCode",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "results",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "object",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "stats",
+          "required": true,
+          "type": "object",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "status",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "YoutubeChannel",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "banner",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "handle",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "name",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "subscriberCount",
+          "required": false,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "thumbnail",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "videoCount",
+          "required": false,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "viewCount",
+          "required": false,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "YoutubePlaylist",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "channel",
+          "required": true,
+          "type": "object",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "description",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "lastUpdated",
+          "required": false,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "title",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "videoCount",
+          "required": true,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "viewCount",
+          "required": false,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "YoutubeSearch",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "nextPageToken",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "query",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "results",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "object",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "totalResults",
+          "required": false,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    },
+    {
+      "name": "YoutubeVideo",
+      "kind": "object",
+      "type": {
+        "type": "object",
+        "format": null,
+        "ref": null,
+        "nullable": false,
+        "items": null,
+        "mapValue": null,
+        "variants": null
+      },
+      "properties": [
+        {
+          "name": "channel",
+          "required": true,
+          "type": "object",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "description",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "duration",
+          "required": true,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "id",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "likeCount",
+          "required": false,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "tags",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "thumbnail",
+          "required": false,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "title",
+          "required": true,
+          "type": "string",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "transcriptLanguages",
+          "required": true,
+          "type": "array",
+          "format": null,
+          "ref": null,
+          "nullable": false,
+          "items": {
+            "type": "string",
+            "format": null,
+            "ref": null,
+            "nullable": false,
+            "items": null,
+            "mapValue": null,
+            "variants": null
+          },
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "uploadDate",
+          "required": false,
+          "type": "string",
+          "format": "date-time",
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        },
+        {
+          "name": "viewCount",
+          "required": false,
+          "type": "number",
+          "format": null,
+          "ref": null,
+          "nullable": true,
+          "items": null,
+          "mapValue": null,
+          "variants": null
+        }
+      ],
+      "values": []
+    }
+  ],
+  "transport": {
+    "engine": "fetch",
+    "implementation": "Fetch API"
+  },
+  "license": {
+    "identifier": "MIT",
+    "copyrightHolder": "SDK Authors",
+    "bundlesFullText": true
+  },
+  "versionFormat": {
+    "policy": "semver",
+    "normalizedVersion": "1.3.0"
+  },
+  "execution": {
+    "form": "native-async",
+    "mechanism": "promise",
+    "unconditional": true,
+    "syncCompanion": false
+  },
+  "documentation": {
+    "depth": "full",
+    "operations": [
+      {
+        "id": "getExtractByJobId",
+        "method": "get",
+        "path": "/extract/{jobId}",
+        "summary": "Retrieves the status and results of an extract job. Use `jobId` to identify the job and check whether it is queued, active, completed, or failed. Completed results include extracted data and may include a generated JSON Schema when the request did not provide one.",
+        "description": "Get results for an extract job by job ID.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getMe",
+        "method": "get",
+        "path": "/me",
+        "summary": "Retrieve organization details, plan information, and credit usage.",
+        "description": "Retrieve organization details, plan information, and credit usage.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "getMetadata",
+        "method": "get",
+        "path": "/metadata",
+        "summary": "Retrieves unified metadata for media hosted on supported internet platforms. Provide `url` as a URI for media such as YouTube videos, TikTok videos, Instagram posts, Twitter/X posts, or Facebook videos. The response includes platform and media identifiers, with available details about the author, media, and engagement.",
+        "description": "Fetch metadata from any supported internet media including YouTube, TikTok, Instagram, Twitter/X and Facebook posts. Returns unified metadata with a predictable structure across all platforms.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getTranscript",
+        "method": "get",
+        "path": "/transcript",
+        "summary": "Retrieves a transcript for a video from a supported platform or a direct media file URL. Set `lang`, `text`, `chunkSize`, and `mode` to control the transcript language, format, chunking, and retrieval or generation behavior. For asynchronous processing, use GET /transcript/{jobId} with the returned job ID to check the result.",
+        "description": "Get transcript from a supported video platform (YouTube, TikTok, Twitter, Instagram, Facebook) or file URL. If the video is too large to return transcript immediately, request returns a job ID. Use the `/transcript/:jobId` endpoint to get job results.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": null
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "chunkSize",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "mode",
+            "in": "query",
+            "required": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getTranscriptByJobId",
+        "method": "get",
+        "path": "/transcript/{jobId}",
+        "summary": "Retrieves the status and results of a transcript job. Use `jobId` to identify the job and check whether it is queued, active, completed, or failed. Completed results may include transcript content, its language, and available language codes.",
+        "description": "Get results for a transcript job by job ID.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getWebCrawlByJobId",
+        "method": "get",
+        "path": "/web/crawl/{jobId}",
+        "summary": "Retrieves the status and results of a website crawl job. Use `jobId` to identify the crawl and `skip` to request results starting at an offset. The response includes crawled pages when the job is completed and a `next` URL when more results are available.",
+        "description": "Get the status and results of a crawl by job ID.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "required": true,
+            "description": "The crawl job ID"
+          },
+          {
+            "name": "skip",
+            "in": "query",
+            "required": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getWebMap",
+        "method": "get",
+        "path": "/web/map",
+        "summary": "Extracts links found across a website starting from a supplied URL. Provide `url` to identify the website to map. The response contains the discovered URLs.",
+        "description": "Extract all links found on a whole website.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getWebScrape",
+        "method": "get",
+        "path": "/web/scrape",
+        "summary": "Extracts webpage content as Markdown from a URL. Use `noLinks` to strip Markdown links and `lang` to request a preferred language using an ISO 639-1 code. The response also includes webpage metadata and URLs found on the page.",
+        "description": "Extract content from any web page to Markdown format.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": true,
+            "description": null
+          },
+          {
+            "name": "noLinks",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getYoutubeBatchByJobId",
+        "method": "get",
+        "path": "/youtube/batch/{jobId}",
+        "summary": "Retrieves the status and results of a YouTube batch job identified by `jobId`. Use `limit` and `offset` to page through completed results in submission order, or omit both to receive all results in one streamed response.",
+        "description": "Get the status and results of a YouTube batch job.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "jobId",
+            "in": "path",
+            "required": true,
+            "description": "The batch job ID"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": "Return at most this many results (with `offset`, pages through a completed batch). Omit both to receive all results in one streamed response."
+          },
+          {
+            "name": "offset",
+            "in": "query",
+            "required": false,
+            "description": "Skip this many results (in submission order) before returning a page."
+          }
+        ]
+      },
+      {
+        "id": "getYoutubeChannel",
+        "method": "get",
+        "path": "/youtube/channel",
+        "summary": "Retrieves metadata for a YouTube channel identified by its URL, handle, or ID. Supply `id` in one of the supported YouTube URL formats or use the channel's handle or ID.",
+        "description": "Get metadata for a YouTube channel.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getYoutubeChannelVideos",
+        "method": "get",
+        "path": "/youtube/channel/videos",
+        "summary": "Lists video IDs from a YouTube channel identified by its URL, handle, or ID. Use `type` to select all videos, regular videos, Shorts, or live streams, and `limit` to set the maximum number returned.",
+        "description": "Get video IDs from a YouTube channel.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "description": null
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getYoutubePlaylist",
+        "method": "get",
+        "path": "/youtube/playlist",
+        "summary": "Retrieves metadata for a YouTube playlist identified by its URL or ID. Supply `id` in one of the supported YouTube URL formats or as a playlist ID.",
+        "description": "Get metadata for a YouTube playlist.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getYoutubePlaylistVideos",
+        "method": "get",
+        "path": "/youtube/playlist/videos",
+        "summary": "Lists video IDs from a YouTube playlist identified by its URL or ID. Set `limit` to control the maximum number returned; it defaults to 100 and must be between 1 and 5000.",
+        "description": "Get video IDs from a YouTube playlist.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "description": null
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getYoutubeSearch",
+        "method": "get",
+        "path": "/youtube/search",
+        "summary": "Searches YouTube for videos, channels, and playlists. Use `query` with optional filters such as `type`, `uploadDate`, `duration`, `sortBy`, and `features` to refine results. Use `nextPageToken` to fetch another page; when you provide `limit`, the API paginates automatically.",
+        "description": "Search YouTube for videos, channels, and playlists with advanced filters.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "query",
+            "in": "query",
+            "required": true,
+            "description": null
+          },
+          {
+            "name": "uploadDate",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "type",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "duration",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "sortBy",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "features",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "nextPageToken",
+            "in": "query",
+            "required": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getYoutubeTranscript",
+        "method": "get",
+        "path": "/youtube/transcript",
+        "summary": "Retrieves a transcript for a YouTube video, with options for language, chunk size, and plain-text output. Provide the video URL or ID and use `lang` to request a preferred ISO 639-1 language; if that language is unavailable, the first available language is used. This operation is closing down and will be removed on a date not specified.",
+        "description": "Get transcript from YouTube video in various formats and languages. If the `lang` parameter is not provided or the transcript is not available in the requested language, the API defaults to the first available language.",
+        "deprecated": true,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "videoId",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "chunkSize",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": false,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getYoutubeTranscriptTranslate",
+        "method": "get",
+        "path": "/youtube/transcript/translate",
+        "summary": "Translates a YouTube video transcript into the language specified by `lang`. Provide the video URL or ID, and optionally select plain-text output or set a chunk size for chunked output.",
+        "description": "Translate YouTube video transcript into different languages.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "url",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "videoId",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "text",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "chunkSize",
+            "in": "query",
+            "required": false,
+            "description": null
+          },
+          {
+            "name": "lang",
+            "in": "query",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "getYoutubeVideo",
+        "method": "get",
+        "path": "/youtube/video",
+        "summary": "Retrieves metadata for a YouTube video identified by its URL or ID. Supply `id` in one of the supported YouTube URL formats or as a video ID. This operation is closing down and will be removed on a date not specified.",
+        "description": "Get metadata for a YouTube video.",
+        "deprecated": true,
+        "deprecationMessage": null,
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "required": true,
+            "description": null
+          }
+        ]
+      },
+      {
+        "id": "postExtract",
+        "method": "post",
+        "path": "/extract",
+        "summary": "Use AI to analyze video content and extract structured data. Provide either a prompt describing what to extract, a JSON Schema for the output format, or both. Supports YouTube, TikTok, Instagram, Twitter/X, and Facebook videos, or a direct media file URL. Returns a job ID for asynchronous processing. Use the `/extract/:jobId` endpoint to poll for results.",
+        "description": "Use AI to analyze video content and extract structured data. Provide either a prompt describing what to extract, a JSON Schema for the output format, or both. Supports YouTube, TikTok, Instagram, Twitter/X, and Facebook videos, or a direct media file URL. Returns a job ID for asynchronous processing. Use the `/extract/:jobId` endpoint to poll for results.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "postWebCrawl",
+        "method": "post",
+        "path": "/web/crawl",
+        "summary": "Submits a crawl job to extract content from pages on a website. Provide `url` as a URI and optionally set `limit` to cap the number of pages crawled; the default limit is 100. Use GET /web/crawl/{jobId} with the returned job ID to retrieve the crawl status and results.",
+        "description": "Create a crawl job to extract content from all pages on a website.",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "postYoutubeTranscriptBatch",
+        "method": "post",
+        "path": "/youtube/transcript/batch",
+        "summary": "Creates an asynchronous batch job to retrieve transcripts for multiple YouTube videos. Supply `videoIds`, `playlistId`, or `channelId` to select the videos; playlist- and channel-based batches include regular videos only, skipping Shorts and live streams.",
+        "description": "Create a batch job to get transcripts of multiple YouTube videos. Batches created from a playlist or channel include regular videos only (Shorts and live streams are skipped).",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      },
+      {
+        "id": "postYoutubeVideoBatch",
+        "method": "post",
+        "path": "/youtube/video/batch",
+        "summary": "Creates an asynchronous batch job to retrieve metadata for multiple YouTube videos. Supply `videoIds`, `playlistId`, or `channelId` to select the videos; playlist- and channel-based batches include regular videos only, skipping Shorts and live streams.",
+        "description": "Create a batch job to fetch metadata of multiple YouTube videos. Batches created from a playlist or channel include regular videos only (Shorts and live streams are skipped).",
+        "deprecated": false,
+        "deprecationMessage": null,
+        "parameters": []
+      }
+    ],
+    "models": [
+      {
+        "name": "CrawlJob",
+        "kind": "model",
+        "description": "Typed representation of the `CrawlJob` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "status",
+            "description": "The status of the crawl job"
+          },
+          {
+            "name": "pages",
+            "description": "List of pages that were crawled (only present when status is completed)"
+          },
+          {
+            "name": "next",
+            "description": "URL for fetching the next page of results (the same endpoint with a `skip` offset). Only present when more pages are available."
+          }
+        ]
+      },
+      {
+        "name": "Error2",
+        "kind": "model",
+        "description": "Standard error response format",
+        "values": [],
+        "properties": [
+          {
+            "name": "error",
+            "description": "Error code identifying the type of error"
+          },
+          {
+            "name": "message",
+            "description": "Human readable error message"
+          },
+          {
+            "name": "details",
+            "description": "Detailed error description"
+          },
+          {
+            "name": "documentationUrl",
+            "description": "URL to error documentation"
+          }
+        ]
+      },
+      {
+        "name": "ExtractJobResult",
+        "kind": "model",
+        "description": "Response for extract job status/results",
+        "values": [],
+        "properties": [
+          {
+            "name": "status",
+            "description": "Current status of the job"
+          },
+          {
+            "name": "error",
+            "description": "Error information if the job failed"
+          },
+          {
+            "name": "data",
+            "description": "Extracted data from the video, structured according to the schema"
+          },
+          {
+            "name": "schema",
+            "description": "JSON Schema generated by AI. Only present when no schema was provided in the request."
+          }
+        ]
+      },
+      {
+        "name": "ExtractRequest",
+        "kind": "model",
+        "description": "Typed representation of the `ExtractRequest` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "url",
+            "description": "URL to any supported video media. Supports YouTube, TikTok, Instagram, Twitter/X, and Facebook videos, or a direct media file URL."
+          },
+          {
+            "name": "prompt",
+            "description": "Natural language description of what data to extract from the video. Required if schema is not provided. Do not include JSON structure definitions here — use the \"schema\" field instead."
+          },
+          {
+            "name": "schema",
+            "description": "JSON Schema defining the structure of data to extract. Required if prompt is not provided."
+          }
+        ]
+      },
+      {
+        "name": "JobId",
+        "kind": "model",
+        "description": "Typed representation of the `JobId` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "jobId",
+            "description": "The ID of the job"
+          }
+        ]
+      },
+      {
+        "name": "JobResult",
+        "kind": "model",
+        "description": "Response for job status/results",
+        "values": [],
+        "properties": [
+          {
+            "name": "status",
+            "description": "Current status of the job"
+          },
+          {
+            "name": "error",
+            "description": "Error information if the job failed"
+          },
+          {
+            "name": "content",
+            "description": "Optional API value serialized in the `content` wire field."
+          },
+          {
+            "name": "lang",
+            "description": "ISO 639-1 language code of transcript"
+          },
+          {
+            "name": "availableLangs",
+            "description": "List of available language codes"
+          }
+        ]
+      },
+      {
+        "name": "MapModel",
+        "kind": "model",
+        "description": "Typed representation of the `MapModel` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "urls",
+            "description": "List of URLs found on the webpage"
+          }
+        ]
+      },
+      {
+        "name": "Me",
+        "kind": "model",
+        "description": "Typed representation of the `Me` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "organizationId",
+            "description": "Unique identifier for the organization"
+          },
+          {
+            "name": "plan",
+            "description": "Subscription plan name"
+          },
+          {
+            "name": "maxCredits",
+            "description": "Maximum credits available for the current billing period"
+          },
+          {
+            "name": "usedCredits",
+            "description": "Number of credits used in the current billing period"
+          }
+        ]
+      },
+      {
+        "name": "MediaType",
+        "kind": "enum",
+        "description": "Type of media content",
+        "values": ["video", "image", "carousel", "post"],
+        "properties": []
+      },
+      {
+        "name": "Metadata",
+        "kind": "model",
+        "description": "Typed representation of the `Metadata` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "platform",
+            "description": "Platform where the media is hosted"
+          },
+          {
+            "name": "type",
+            "description": "Required API value serialized in the `type` wire field."
+          },
+          {
+            "name": "id",
+            "description": "Unique media identifier from the platform"
+          },
+          {
+            "name": "url",
+            "description": "Canonical URL to the media"
+          },
+          {
+            "name": "title",
+            "description": "Media title"
+          },
+          {
+            "name": "description",
+            "description": "Media description or caption"
+          },
+          {
+            "name": "author",
+            "description": "Author/creator information"
+          },
+          {
+            "name": "stats",
+            "description": "Engagement statistics. null values indicate the metric is unavailable or not applicable for the platform."
+          },
+          {
+            "name": "media",
+            "description": "Media-specific data, discriminated by type field (video, image, carousel, or post)"
+          },
+          {
+            "name": "tags",
+            "description": "Tags, hashtags, or keywords associated with the media"
+          },
+          {
+            "name": "createdAt",
+            "description": "Creation/publish timestamp (ISO 8601 format)"
+          },
+          {
+            "name": "additionalData",
+            "description": "Platform-specific additional data"
+          }
+        ]
+      },
+      {
+        "name": "MetadataQuery",
+        "kind": "model",
+        "description": "URL to any supported internet media. Supports YouTube videos, TikTok videos, Instagram reels/posts, Twitter/X posts, Facebook videos, and more.",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "Scrape",
+        "kind": "model",
+        "description": "Typed representation of the `Scrape` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "url",
+            "description": "The URL that was scraped"
+          },
+          {
+            "name": "content",
+            "description": "The Markdown content extracted from the URL"
+          },
+          {
+            "name": "name",
+            "description": "The name of the webpage"
+          },
+          {
+            "name": "description",
+            "description": "A description of the webpage"
+          },
+          {
+            "name": "ogUrl",
+            "description": "Open Graph URL for the webpage"
+          },
+          {
+            "name": "countCharacters",
+            "description": "The number of characters in the content"
+          },
+          {
+            "name": "urls",
+            "description": "List of URLs found on the webpage"
+          }
+        ]
+      },
+      {
+        "name": "Transcript",
+        "kind": "model",
+        "description": "Typed representation of the `Transcript` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "content",
+            "description": "Required API value serialized in the `content` wire field."
+          },
+          {
+            "name": "lang",
+            "description": "ISO 639-1 language code of transcript"
+          },
+          {
+            "name": "availableLangs",
+            "description": "List of available language codes"
+          }
+        ]
+      },
+      {
+        "name": "TranscriptChunk",
+        "kind": "model",
+        "description": "Typed representation of the `TranscriptChunk` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "text",
+            "description": "Transcript segment"
+          },
+          {
+            "name": "offset",
+            "description": "Start time in milliseconds"
+          },
+          {
+            "name": "duration",
+            "description": "Duration in milliseconds"
+          },
+          {
+            "name": "lang",
+            "description": "ISO 639-1 language code of chunk"
+          }
+        ]
+      },
+      {
+        "name": "TranscriptOrJobId",
+        "kind": "model",
+        "description": "Either a transcript result (synchronous) or a job ID (asynchronous).",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "TranslatedTranscript",
+        "kind": "model",
+        "description": "Typed representation of the `TranslatedTranscript` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "content",
+            "description": "Required API value serialized in the `content` wire field."
+          },
+          {
+            "name": "lang",
+            "description": "ISO 639-1 language code of translation"
+          }
+        ]
+      },
+      {
+        "name": "UrlQuery",
+        "kind": "model",
+        "description": "URL of the webpage",
+        "values": [],
+        "properties": []
+      },
+      {
+        "name": "VideoIds",
+        "kind": "model",
+        "description": "Typed representation of the `VideoIds` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "videoIds",
+            "description": "List of vertical video IDs"
+          },
+          {
+            "name": "shortIds",
+            "description": "List of Shorts IDs"
+          },
+          {
+            "name": "liveIds",
+            "description": "List of live video IDs"
+          }
+        ]
+      },
+      {
+        "name": "YouTubeBatchResults",
+        "kind": "model",
+        "description": "Response for batch job results",
+        "values": [],
+        "properties": [
+          {
+            "name": "status",
+            "description": "Current status of the batch job"
+          },
+          {
+            "name": "errorCode",
+            "description": "Set to `job-expired` when the batch aged out before finishing; its results are no longer available."
+          },
+          {
+            "name": "results",
+            "description": "Array of results for each video in the batch"
+          },
+          {
+            "name": "stats",
+            "description": "Statistics about the batch job progress"
+          },
+          {
+            "name": "completedAt",
+            "description": "Timestamp when the job completed, if status is completed"
+          }
+        ]
+      },
+      {
+        "name": "YoutubeChannel",
+        "kind": "model",
+        "description": "Typed representation of the `YoutubeChannel` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "id",
+            "description": "YouTube channel ID"
+          },
+          {
+            "name": "name",
+            "description": "Channel name"
+          },
+          {
+            "name": "handle",
+            "description": "Channel handle (empty string when the channel has none)"
+          },
+          {
+            "name": "description",
+            "description": "Channel description"
+          },
+          {
+            "name": "subscriberCount",
+            "description": "Number of subscribers"
+          },
+          {
+            "name": "videoCount",
+            "description": "Number of videos on the channel"
+          },
+          {
+            "name": "viewCount",
+            "description": "Total number of views across all channel videos"
+          },
+          {
+            "name": "thumbnail",
+            "description": "URL to channel thumbnail"
+          },
+          {
+            "name": "banner",
+            "description": "URL to channel banner"
+          }
+        ]
+      },
+      {
+        "name": "YoutubePlaylist",
+        "kind": "model",
+        "description": "Typed representation of the `YoutubePlaylist` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "id",
+            "description": "YouTube playlist ID"
+          },
+          {
+            "name": "title",
+            "description": "Playlist title"
+          },
+          {
+            "name": "description",
+            "description": "Playlist description (empty string when the playlist has none)"
+          },
+          {
+            "name": "videoCount",
+            "description": "Number of videos in the playlist"
+          },
+          {
+            "name": "viewCount",
+            "description": "Number of views for the playlist"
+          },
+          {
+            "name": "lastUpdated",
+            "description": "When the playlist was last updated"
+          },
+          {
+            "name": "channel",
+            "description": "Channel information"
+          }
+        ]
+      },
+      {
+        "name": "YoutubeSearch",
+        "kind": "model",
+        "description": "Typed representation of the `YoutubeSearch` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "query",
+            "description": "The search query that was executed"
+          },
+          {
+            "name": "results",
+            "description": "Array of search results"
+          },
+          {
+            "name": "totalResults",
+            "description": "Estimated total number of results"
+          },
+          {
+            "name": "nextPageToken",
+            "description": "Token for fetching the next page of results. Only returned when limit parameter is not provided."
+          }
+        ]
+      },
+      {
+        "name": "YoutubeVideo",
+        "kind": "model",
+        "description": "Typed representation of the `YoutubeVideo` API schema.",
+        "values": [],
+        "properties": [
+          {
+            "name": "id",
+            "description": "YouTube video ID"
+          },
+          {
+            "name": "title",
+            "description": "Video title"
+          },
+          {
+            "name": "description",
+            "description": "Video description"
+          },
+          {
+            "name": "duration",
+            "description": "Video duration in seconds"
+          },
+          {
+            "name": "channel",
+            "description": "Channel information"
+          },
+          {
+            "name": "tags",
+            "description": "Video tags"
+          },
+          {
+            "name": "thumbnail",
+            "description": "URL to video thumbnail"
+          },
+          {
+            "name": "uploadDate",
+            "description": "Video upload date"
+          },
+          {
+            "name": "viewCount",
+            "description": "Number of views"
+          },
+          {
+            "name": "likeCount",
+            "description": "Number of likes"
+          },
+          {
+            "name": "transcriptLanguages",
+            "description": "Available transcript language codes"
+          }
+        ]
+      }
+    ]
+  }
+}

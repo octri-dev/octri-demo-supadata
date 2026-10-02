@@ -1,0 +1,7 @@
+{
+  "mode": "synthetic fixture, offline HTTP mock; no live API calls",
+  "octri_typescript_client": "accepted response with optional url absent",
+  "requests_intercepted": [
+    "https://api.supadata.ai/v1/metadata?url=https%3A%2F%2Fwww.tiktok.com%2F%40demo%2Fvideo%2F123"
+  ]
+}

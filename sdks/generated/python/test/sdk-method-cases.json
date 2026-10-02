@@ -1,0 +1,864 @@
+{
+  "cases": [
+    {
+      "id": "getExtractByJobId:get_extract_by_job_id",
+      "operationId": "getExtractByJobId",
+      "methodName": "get_extract_by_job_id",
+      "namespace": [
+        "extract"
+      ],
+      "mode": "normal",
+      "owner": "extract",
+      "arguments": {
+        "job_id": "job-1"
+      },
+      "argumentOrder": [
+        "job_id"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "status": "completed",
+          "error": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "data": {
+            "topics": [
+              "AI basics",
+              "Machine learning",
+              "Neural networks"
+            ],
+            "summary": "An introduction to artificial intelligence concepts"
+          },
+          "schema": {
+            "type": "object",
+            "properties": {
+              "topics": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "summary": {
+                "type": "string"
+              }
+            },
+            "required": [
+              "topics",
+              "summary"
+            ]
+          }
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getMe:get_me",
+      "operationId": "getMe",
+      "methodName": "get_me",
+      "namespace": [
+        "account"
+      ],
+      "mode": "normal",
+      "owner": "account",
+      "arguments": {},
+      "argumentOrder": [],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "organizationId": "550e8400-e29b-41d4-a716-446655440000",
+          "plan": "Pro",
+          "maxCredits": 100000,
+          "usedCredits": 15000
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getMetadata:get_metadata",
+      "operationId": "getMetadata",
+      "methodName": "get_metadata",
+      "namespace": [
+        "metadata"
+      ],
+      "mode": "normal",
+      "owner": "metadata",
+      "arguments": {
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+      },
+      "argumentOrder": [
+        "url"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "platform": "youtube",
+          "type": "video",
+          "id": "dQw4w9WgXcQ",
+          "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+          "title": "Amazing Video Title",
+          "description": "Check out this amazing content! #awesome",
+          "author": {
+            "username": "username",
+            "displayName": "John Doe",
+            "avatarUrl": "https://example.com/avatar.jpg",
+            "verified": true
+          },
+          "stats": {
+            "views": 50000,
+            "likes": 5000,
+            "comments": 200,
+            "shares": 100
+          },
+          "media": {
+            "type": "video",
+            "duration": 30,
+            "thumbnailUrl": "https://example.com/thumb.jpg"
+          },
+          "tags": [
+            "funny",
+            "cats",
+            "viral"
+          ],
+          "createdAt": "2024-01-15T10:30:00Z",
+          "additionalData": {
+            "key": null
+          }
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getTranscript:get_transcript",
+      "operationId": "getTranscript",
+      "methodName": "get_transcript",
+      "namespace": [
+        "transcript"
+      ],
+      "mode": "normal",
+      "owner": "transcript",
+      "arguments": {
+        "url": "https://youtu.be/dQw4w9WgXcQ",
+        "lang": "en",
+        "text": false,
+        "chunk_size": 1000,
+        "mode": "auto"
+      },
+      "argumentOrder": [
+        "url",
+        "lang",
+        "text",
+        "chunk_size",
+        "mode"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "content": [
+            {
+              "text": "Never gonna give you up...",
+              "offset": 8150,
+              "duration": 1200,
+              "lang": "en"
+            }
+          ],
+          "lang": "en",
+          "availableLangs": [
+            "en",
+            "es",
+            "zh-TW"
+          ]
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getTranscriptByJobId:get_transcript_by_job_id",
+      "operationId": "getTranscriptByJobId",
+      "methodName": "get_transcript_by_job_id",
+      "namespace": [
+        "transcript"
+      ],
+      "mode": "normal",
+      "owner": "transcript",
+      "arguments": {
+        "job_id": "job-1"
+      },
+      "argumentOrder": [
+        "job_id"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "status": "completed",
+          "error": {
+            "error": "invalid-request",
+            "message": "Invalid Request",
+            "details": "The request is invalid or malformed",
+            "documentationUrl": "https://docs.supadata.ai/errors#invalid-request"
+          },
+          "content": [
+            {
+              "text": "Never gonna give you up...",
+              "offset": 8150,
+              "duration": 1200,
+              "lang": "en"
+            }
+          ],
+          "lang": "en",
+          "availableLangs": [
+            "en",
+            "es",
+            "zh-TW"
+          ]
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getWebCrawlByJobId:get_web_crawl_by_job_id",
+      "operationId": "getWebCrawlByJobId",
+      "methodName": "get_web_crawl_by_job_id",
+      "namespace": [
+        "crawl"
+      ],
+      "mode": "normal",
+      "owner": "crawl",
+      "arguments": {
+        "job_id": "job-1",
+        "skip": 0
+      },
+      "argumentOrder": [
+        "job_id",
+        "skip"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "status": "completed",
+          "pages": [
+            {
+              "url": "https://supadata.ai",
+              "content": "# Supadata\n## What is Supadata?\nSupadata is an API platform for data extraction for LLM training.",
+              "name": "Supadata: Web & YouTube to text API for developers",
+              "ogUrl": "https://supadata.ai/opengraph-image.png",
+              "countCharacters": 12300
+            }
+          ],
+          "next": "https://api.supadata.ai/v1/web/crawl/123e4567-e89b-12d3-a456-426614174000?skip=10"
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getWebMap:get_web_map",
+      "operationId": "getWebMap",
+      "methodName": "get_web_map",
+      "namespace": [
+        "map"
+      ],
+      "mode": "normal",
+      "owner": "map",
+      "arguments": {
+        "url": "https://supadata.ai"
+      },
+      "argumentOrder": [
+        "url"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "urls": [
+            "https://supadata.ai",
+            "https://docs.supadata.ai"
+          ]
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getWebScrape:get_web_scrape",
+      "operationId": "getWebScrape",
+      "methodName": "get_web_scrape",
+      "namespace": [
+        "scrape"
+      ],
+      "mode": "normal",
+      "owner": "scrape",
+      "arguments": {
+        "url": "https://supadata.ai",
+        "no_links": false,
+        "lang": "en"
+      },
+      "argumentOrder": [
+        "url",
+        "no_links",
+        "lang"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "url": "https://supadata.ai",
+          "content": "# Supadata\n## What is Supadata?\nSupadata is an API platform for data extraction for LLM training.",
+          "name": "Supadata: Web & YouTube to text API for developers",
+          "description": "Supadata is one stop-shop API for developers to read web and YouTube content, ready for AI training and retrieval.",
+          "ogUrl": "https://supadata.ai/opengraph-image.png",
+          "countCharacters": 12300,
+          "urls": [
+            "https://supadata.ai",
+            "https://docs.supadata.ai"
+          ]
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getYoutubeBatchByJobId:get_youtube_batch_by_job_id",
+      "operationId": "getYoutubeBatchByJobId",
+      "methodName": "get_youtube_batch_by_job_id",
+      "namespace": [
+        "batch"
+      ],
+      "mode": "normal",
+      "owner": "batch",
+      "arguments": {
+        "job_id": "job-1",
+        "limit": 1,
+        "offset": 0
+      },
+      "argumentOrder": [
+        "job_id",
+        "limit",
+        "offset"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "status": "completed",
+          "errorCode": "job-expired",
+          "results": [
+            {
+              "videoId": "dQw4w9WgXcQ",
+              "transcript": {
+                "content": [
+                  {
+                    "text": "Never gonna give you up...",
+                    "offset": 8150,
+                    "duration": 1200,
+                    "lang": "en"
+                  }
+                ],
+                "lang": "en",
+                "availableLangs": [
+                  "en",
+                  "es",
+                  "zh-TW"
+                ]
+              },
+              "video": {
+                "id": "dQw4w9WgXcQ",
+                "title": "Rick Astley - Never Gonna Give You Up (Official Music Video)",
+                "description": "The official music video for \"Never Gonna Give You Up\"...",
+                "duration": 213,
+                "channel": {
+                  "id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+                  "name": "Rick Astley"
+                },
+                "tags": [
+                  "Rick Astley",
+                  "Official Video",
+                  "Music"
+                ],
+                "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+                "uploadDate": "2009-10-25T00:00:00.000Z",
+                "viewCount": 1234567890,
+                "likeCount": 12345678,
+                "transcriptLanguages": [
+                  "en",
+                  "es",
+                  "fr"
+                ]
+              },
+              "errorCode": "not-found"
+            }
+          ],
+          "stats": {
+            "total": 10,
+            "succeeded": 8,
+            "failed": 2
+          },
+          "completedAt": "2025-04-03T06:59:53.428Z"
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getYoutubeChannel:get_youtube_channel",
+      "operationId": "getYoutubeChannel",
+      "methodName": "get_youtube_channel",
+      "namespace": [
+        "channel"
+      ],
+      "mode": "normal",
+      "owner": "channel",
+      "arguments": {
+        "id": "https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw"
+      },
+      "argumentOrder": [
+        "id"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+          "name": "Rick Astley",
+          "handle": "@RickAstleyYT",
+          "description": "The official Rick Astley YouTube channel",
+          "subscriberCount": 2000000,
+          "videoCount": 100,
+          "viewCount": 1002293434,
+          "thumbnail": "https://yt3.ggpht.com/...",
+          "banner": "https://yt3.ggpht.com/..."
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getYoutubeChannelVideos:get_youtube_channel_videos",
+      "operationId": "getYoutubeChannelVideos",
+      "methodName": "get_youtube_channel_videos",
+      "namespace": [
+        "videos"
+      ],
+      "mode": "normal",
+      "owner": "videos",
+      "arguments": {
+        "id": "https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw",
+        "limit": 10,
+        "type": "video"
+      },
+      "argumentOrder": [
+        "id",
+        "limit",
+        "type"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "videoIds": [
+            "dQw4w9WgXcQ",
+            "xvFZjo5PgG0"
+          ],
+          "shortIds": [
+            "dQw4w9WgXcQ",
+            "xvFZjo5PgG0"
+          ],
+          "liveIds": [
+            "dQw4w9WgXcQ",
+            "xvFZjo5PgG0"
+          ]
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getYoutubePlaylist:get_youtube_playlist",
+      "operationId": "getYoutubePlaylist",
+      "methodName": "get_youtube_playlist",
+      "namespace": [
+        "playlist"
+      ],
+      "mode": "normal",
+      "owner": "playlist",
+      "arguments": {
+        "id": "https://www.youtube.com/playlist?list=PLlaN88a7y2_plecYoJxvRFTLHVbIVAOoc"
+      },
+      "argumentOrder": [
+        "id"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "id": "PLlaN88a7y2_plecYoJxvRFTLHVbIVAOoc",
+          "title": "My Favorite Videos",
+          "description": "A collection of my favorite videos",
+          "videoCount": 25,
+          "viewCount": 1000000,
+          "lastUpdated": "2023-01-01T00:00:00.000Z",
+          "channel": {
+            "id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+            "name": "Rick Astley"
+          }
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getYoutubePlaylistVideos:get_youtube_playlist_videos",
+      "operationId": "getYoutubePlaylistVideos",
+      "methodName": "get_youtube_playlist_videos",
+      "namespace": [
+        "videos"
+      ],
+      "mode": "normal",
+      "owner": "videos",
+      "arguments": {
+        "id": "https://www.youtube.com/playlist?list=PLlaN88a7y2_plecYoJxvRFTLHVbIVAOoc",
+        "limit": 10
+      },
+      "argumentOrder": [
+        "id",
+        "limit"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "videoIds": [
+            "dQw4w9WgXcQ",
+            "xvFZjo5PgG0"
+          ],
+          "shortIds": [
+            "dQw4w9WgXcQ",
+            "xvFZjo5PgG0"
+          ],
+          "liveIds": [
+            "dQw4w9WgXcQ",
+            "xvFZjo5PgG0"
+          ]
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getYoutubeSearch:get_youtube_search",
+      "operationId": "getYoutubeSearch",
+      "methodName": "get_youtube_search",
+      "namespace": [
+        "search"
+      ],
+      "mode": "normal",
+      "owner": "search",
+      "arguments": {
+        "query": "Never Gonna Give You Up",
+        "upload_date": "month",
+        "type": "video",
+        "duration": "medium",
+        "sort_by": "views",
+        "features": [
+          "hd",
+          "subtitles",
+          "creative-commons"
+        ],
+        "limit": 50,
+        "next_page_token": "eyJxdWVyeSI6IlJpY2sgQXN0bGV5IiwiZmlsdGVycyI6e319"
+      },
+      "argumentOrder": [
+        "query",
+        "upload_date",
+        "type",
+        "duration",
+        "sort_by",
+        "features",
+        "limit",
+        "next_page_token"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "query": "Rick Astley Never Gonna Give You Up",
+          "results": [
+            {
+              "type": "video",
+              "id": "dQw4w9WgXcQ",
+              "title": "Rick Astley - Never Gonna Give You Up (Official Video)",
+              "description": "The official music video for Rick Astley...",
+              "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+              "duration": 213,
+              "viewCount": 1234567890,
+              "uploadDate": "2009-10-25T00:00:00.000Z",
+              "channel": {
+                "id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+                "name": "Rick Astley",
+                "thumbnail": "https://yt3.ggpht.com/..."
+              },
+              "handle": "@RickAstleyYT",
+              "videoCount": 100
+            }
+          ],
+          "totalResults": 1000000,
+          "nextPageToken": "eyJxdWVyeSI6IlJpY2sgQXN0bGV5IiwiZmlsdGVycyI6e319"
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getYoutubeTranscript:get_youtube_transcript",
+      "operationId": "getYoutubeTranscript",
+      "methodName": "get_youtube_transcript",
+      "namespace": [
+        "transcript"
+      ],
+      "mode": "normal",
+      "owner": "transcript",
+      "arguments": {
+        "url": "https://youtu.be/dQw4w9WgXcQ",
+        "video_id": "dQw4w9WgXcQ",
+        "text": false,
+        "chunk_size": 1000,
+        "lang": "en"
+      },
+      "argumentOrder": [
+        "url",
+        "video_id",
+        "text",
+        "chunk_size",
+        "lang"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "content": [
+            {
+              "text": "Never gonna give you up...",
+              "offset": 8150,
+              "duration": 1200,
+              "lang": "en"
+            }
+          ],
+          "lang": "en",
+          "availableLangs": [
+            "en",
+            "es",
+            "zh-TW"
+          ]
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getYoutubeTranscriptTranslate:get_youtube_transcript_translate",
+      "operationId": "getYoutubeTranscriptTranslate",
+      "methodName": "get_youtube_transcript_translate",
+      "namespace": [
+        "translate"
+      ],
+      "mode": "normal",
+      "owner": "translate",
+      "arguments": {
+        "lang": "en",
+        "url": "https://youtu.be/dQw4w9WgXcQ",
+        "video_id": "dQw4w9WgXcQ",
+        "text": false,
+        "chunk_size": 1000
+      },
+      "argumentOrder": [
+        "lang",
+        "url",
+        "video_id",
+        "text",
+        "chunk_size"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "content": [
+            {
+              "text": "Never gonna give you up...",
+              "offset": 8150,
+              "duration": 1200,
+              "lang": "en"
+            }
+          ],
+          "lang": "es"
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "getYoutubeVideo:get_youtube_video",
+      "operationId": "getYoutubeVideo",
+      "methodName": "get_youtube_video",
+      "namespace": [
+        "video"
+      ],
+      "mode": "normal",
+      "owner": "video",
+      "arguments": {
+        "id": "https://youtu.be/dQw4w9WgXcQ"
+      },
+      "argumentOrder": [
+        "id"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "id": "dQw4w9WgXcQ",
+          "title": "Rick Astley - Never Gonna Give You Up (Official Music Video)",
+          "description": "The official music video for \"Never Gonna Give You Up\"...",
+          "duration": 213,
+          "channel": {
+            "id": "UCuAXFkgsw1L7xaCfnd5JJOw",
+            "name": "Rick Astley"
+          },
+          "tags": [
+            "Rick Astley",
+            "Official Video",
+            "Music"
+          ],
+          "thumbnail": "https://i.ytimg.com/vi/dQw4w9WgXcQ/hqdefault.jpg",
+          "uploadDate": "2009-10-25T00:00:00.000Z",
+          "viewCount": 1234567890,
+          "likeCount": 12345678,
+          "transcriptLanguages": [
+            "en",
+            "es",
+            "fr"
+          ]
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "postExtract:post_extract",
+      "operationId": "postExtract",
+      "methodName": "post_extract",
+      "namespace": [
+        "extract"
+      ],
+      "mode": "normal",
+      "owner": "extract",
+      "arguments": {
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "prompt": "Extract the main topics discussed and key takeaways",
+        "schema": {
+          "type": "object",
+          "properties": {
+            "topics": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              },
+              "description": "Main topics discussed"
+            },
+            "summary": {
+              "type": "string",
+              "description": "Brief summary of the video"
+            }
+          },
+          "required": [
+            "topics",
+            "summary"
+          ]
+        }
+      },
+      "argumentOrder": [
+        "url",
+        "prompt",
+        "schema"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "jobId": "123e4567-e89b-12d3-a456-426614174000"
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "postWebCrawl:post_web_crawl",
+      "operationId": "postWebCrawl",
+      "methodName": "post_web_crawl",
+      "namespace": [
+        "crawl"
+      ],
+      "mode": "normal",
+      "owner": "crawl",
+      "arguments": {
+        "url": "https://supadata.ai",
+        "limit": 100
+      },
+      "argumentOrder": [
+        "url",
+        "limit"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "jobId": "123e4567-e89b-12d3-a456-426614174000"
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "postYoutubeTranscriptBatch:post_youtube_transcript_batch",
+      "operationId": "postYoutubeTranscriptBatch",
+      "methodName": "post_youtube_transcript_batch",
+      "namespace": [
+        "batch"
+      ],
+      "mode": "normal",
+      "owner": "batch",
+      "arguments": {
+        "video_ids": [
+          "dQw4w9WgXcQ",
+          "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+        ],
+        "playlist_id": "https://www.youtube.com/playlist?list=PLlaN88a7y2_plecYoJxvRFTLHVbIVAOoc",
+        "channel_id": "https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw",
+        "limit": 20,
+        "lang": "en",
+        "text": false
+      },
+      "argumentOrder": [
+        "video_ids",
+        "playlist_id",
+        "channel_id",
+        "limit",
+        "lang",
+        "text"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "jobId": "123e4567-e89b-12d3-a456-426614174000"
+        },
+        "byteLength": 0
+      }
+    },
+    {
+      "id": "postYoutubeVideoBatch:post_youtube_video_batch",
+      "operationId": "postYoutubeVideoBatch",
+      "methodName": "post_youtube_video_batch",
+      "namespace": [
+        "batch"
+      ],
+      "mode": "normal",
+      "owner": "batch",
+      "arguments": {
+        "video_ids": [
+          "dQw4w9WgXcQ",
+          "https://www.youtube.com/watch?v=xvFZjo5PgG0"
+        ],
+        "playlist_id": "https://www.youtube.com/playlist?list=PLlaN88a7y2_plecYoJxvRFTLHVbIVAOoc",
+        "channel_id": "https://www.youtube.com/channel/UCuAXFkgsw1L7xaCfnd5JJOw",
+        "limit": 20
+      },
+      "argumentOrder": [
+        "video_ids",
+        "playlist_id",
+        "channel_id",
+        "limit"
+      ],
+      "response": {
+        "kind": "json",
+        "expected": {
+          "jobId": "123e4567-e89b-12d3-a456-426614174000"
+        },
+        "byteLength": 0
+      }
+    }
+  ]
+}
