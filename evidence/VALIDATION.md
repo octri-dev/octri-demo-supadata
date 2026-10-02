@@ -13,6 +13,8 @@ The SDK suite exercised all 21 operations in each language against local HTTP se
 
 The original targeted demo also passes in Python and TypeScript. Built wheel and npm archives were installed in fresh environments. Each installed client passed import, a high-level call, authentication-header capture, 401 error/request-ID handling, a 429 retry followed by success, and timeout handling. See `installed-python-results.json` and `installed-typescript-results.json`.
 
+The documented verification command also passed from a fresh clone with a new virtual environment and locked npm installs. See `clean-checkout-results.json`.
+
 ## Repairs made after the broader test run
 
 - The Python response test compared Pydantic's normalized timestamp strings with the original wire spelling. It now compares timezone-aware date-times as instants. A regression test also verifies that different instants and different ordinary strings still fail comparison. The SDK's datetime parsing behavior is unchanged.

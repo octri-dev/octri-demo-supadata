@@ -1,0 +1,63 @@
+{
+  "checked_on": "2026-10-02",
+  "setup": "fresh local git clone; new virtualenv; locked npm installs",
+  "checks": [
+    {
+      "check": "generated/python/tests",
+      "exit_code": 0
+    },
+    {
+      "check": "generated/python/lint",
+      "exit_code": 0
+    },
+    {
+      "check": "generated/python/format",
+      "exit_code": 0
+    },
+    {
+      "check": "generated/python/types",
+      "exit_code": 0
+    },
+    {
+      "check": "generated/python/package",
+      "exit_code": 0
+    },
+    {
+      "check": "generated/typescript/install",
+      "exit_code": 0
+    },
+    {
+      "check": "generated/typescript/tests",
+      "exit_code": 0
+    },
+    {
+      "check": "generated/typescript/lint",
+      "exit_code": 0
+    },
+    {
+      "check": "generated/typescript/format",
+      "exit_code": 0
+    },
+    {
+      "check": "generated/typescript/types",
+      "exit_code": 0
+    },
+    {
+      "check": "generated/typescript/package",
+      "exit_code": 0
+    },
+    {
+      "check": "root/install",
+      "exit_code": 0
+    },
+    {
+      "check": "demo/python",
+      "exit_code": 0
+    },
+    {
+      "check": "demo/typescript",
+      "exit_code": 0
+    }
+  ],
+  "status": "passed"
+}
