@@ -1,5 +1,5 @@
 [project]
-name = "supadata"
+name = "octri-demo-supadata"
 version = "1.3.0"
 requires-python = ">=3.10"
 dependencies = ["httpx>=0.24.0", "pydantic>=2.0", "typing-extensions>=4.6"]

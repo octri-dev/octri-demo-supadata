@@ -62,7 +62,7 @@ function wrapAtPath(value, path) {
 function writeHeaders(res, status, contentType, length) {
   const headers = {
     "Content-Type": contentType,
-    "X-Mock-Server": META.title,
+    "X-Mock-Server": encodeURIComponent(META.title),
     "X-Request-ID": "req_mock_123",
   };
   if (length !== null) headers["Content-Length"] = length;

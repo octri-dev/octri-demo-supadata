@@ -1,5 +1,7 @@
 # Supadata: an unofficial Octri SDK demonstration
 
+[![Demo validation](https://github.com/octri-dev/octri-demo-supadata/actions/workflows/demo-validation.yml/badge.svg)](https://github.com/octri-dev/octri-demo-supadata/actions/workflows/demo-validation.yml)
+
 **A reproducible optional-field contract example, with generated Python and TypeScript SDKs.** Created by Octri for evaluation. Not an official Supadata SDK, not endorsed by Supadata, and not published to a package registry.
 
 ## The observation
@@ -25,7 +27,7 @@ A [public report describes the same missing-argument error](https://supadata.fea
 
 ## Try it locally
 
-Requires Python 3.10+ and Node.js 20+.
+Requires Python 3.10+ and Node.js 22.12+.
 
 ```sh
 git clone https://github.com/octri-dev/octri-demo-supadata.git
@@ -39,12 +41,12 @@ npm run check:typescript
 
 The Python demo validates the fixture against the source schema, loads the pinned upstream model in isolation, then intercepts the actual generated client's request with `httpx.MockTransport`. The TypeScript demo compiles the complete generated SDK and intercepts its request with a fetch stub. Neither calls the live API or needs credentials.
 
-Client classes in these builds require an explicit base URL in their constructor config. The examples set `https://api.supadata.ai/v1`. These are local demos: package names retain generator output and must be reviewed and renamed before any registry release. Both official and generated Python clients use the import name `supadata`; keep them in separate environments.
+Client classes in these builds require an explicit base URL in their constructor config. The examples set `https://api.supadata.ai/v1`. These are local demos: distribution names explicitly identify them as Octri demos; the npm package is marked private. Both official and generated Python clients use the import name `supadata`; keep them in separate environments.
 
 ## What is included
 
 - [`specs/upstream.json`](specs/upstream.json): unchanged public spec snapshot, version 1.3.0, containing 21 operations.
-- [`sdks/generated`](sdks/generated): unedited Octri Python and TypeScript output.
+- [`sdks/generated`](sdks/generated): Octri Python and TypeScript output, with documented local demo repairs.
 - [`vendor/supadata-python`](vendor/supadata-python): only the upstream `types.py` source needed for reproduction, with its original license. Commit `35b369f30ad8c9de10957a922265e51c586b9cc6`; repository package version 1.7.0.
 - [`evidence`](evidence): recorded results and source provenance.
 
@@ -55,3 +57,7 @@ Client classes in these builds require an explicit base URL in their constructor
 A useful pilot would establish the intended contract, test one real customer workflow with the team's help, then regenerate after a schema change. This demo validates one behavior, not every endpoint or production compatibility.
 
 [Octri](https://octri.dev) · [Public source API](https://supadata.ai) · [Provenance](evidence/provenance.json)
+
+## Demo readiness
+
+The complete SDK suites, lint, format, type checks, builds, package creation, and clean-install smoke tests were checked before sharing. See [the validation report](evidence/VALIDATION.md) for exact counts, commands, local repairs, and limits. The current source includes those repairs; original Octri ZIP hashes remain in provenance for comparison.

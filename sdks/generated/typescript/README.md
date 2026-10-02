@@ -1,21 +1,29 @@
 # Supadata TypeScript SDK
 
+> **Unofficial Octri evaluation demo.** Not endorsed by Supadata. Use the local files in this repository; this demo is not published on npm or PyPI. [Runnable offline examples](../../../README.md) · [Validation and local repairs](../../../evidence/VALIDATION.md).
+
+
 Web & Social Media Content API for Developers
 
-> Package `supadata` · Version `1.3.0` · 21 operations
+> Package `@octri-dev/octri-demo-supadata` · Version `1.3.0` · 21 operations
 
 ## Installation
 
+From this SDK directory:
+
 ```sh
-npm install supadata@1.3.0
+npm ci --ignore-scripts
+npm run build
 ```
+
+Import this demo from its local `dist/index.js`. The package is marked private to prevent accidental registry publication.
 
 ## Quickstart
 
 The example calls `getMe` (GET `/me`), a low-friction operation that requires no request arguments.
 
 ```ts
-import { Supadata } from "supadata";
+import { Supadata } from "./dist/index.js";
 
 async function main() {
   const client = new Supadata({
@@ -80,7 +88,7 @@ An operation that declares error models also exports `<Operation>Error`, the uni
 ## Local mock-server tests
 
 Generated SDK includes schema-derived, zero-dependency mock server and network
-contract suite. Node.js 20+ required. Contract probes use authored response
+contract suite. Node.js 22.12+ required. Contract probes use authored response
 examples only; schema-synthesized routes remain available to the local server.
 
 `./scripts/mock --port 4010` starts server. `./scripts/test` runs the mock contract suite, then native SDK tests. A zero-authored-example contract run succeeds with an explicit zero-test

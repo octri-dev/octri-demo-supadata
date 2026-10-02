@@ -4,3 +4,9 @@ dist/
 __pycache__/
 *.pyc
 .env
+build/
+*.egg-info/
+*.tgz
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/

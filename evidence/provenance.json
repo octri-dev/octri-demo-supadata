@@ -3,8 +3,8 @@
   "created_by": "Octri; unofficial evaluation demo",
   "spec_source": "https://docs.supadata.ai/api-reference/v1-openapi.json",
   "spec_sha256": "3d7785b465a48a16f4a1b62ae5710e913a25bbc348577ac8a7e43e8fbfea5ef3",
-  "verification": "local compilation and offline mocks only; no live API calls",
-  "generated_sources": "Unedited Octri SDK Studio output",
+  "verification": "Full local SDK tests, type/lint/format/build/package checks, clean install checks, and offline mocks. No live API calls.",
+  "generated_sources": "Octri SDK Studio output with local validation repairs documented in evidence/VALIDATION.md",
   "artifacts": {
     "supadata-python.zip": {
       "sha256": "0c5053164e90b9e18220098a949269d1477c1c8ae9c247b411b70ab659e62aea"

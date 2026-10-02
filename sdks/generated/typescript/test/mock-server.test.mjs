@@ -204,7 +204,7 @@ async function probe(baseUrl, route, responseMode, requestMode, forcedStatus) {
   const response = await fetch(url, {
     method: route.method,
     headers: init.headers,
-    body: init.body,
+    ...(route.method === "GET" || route.method === "HEAD" ? {} : { body: init.body }),
   });
   let expectedExample = responseMode.example;
   if (

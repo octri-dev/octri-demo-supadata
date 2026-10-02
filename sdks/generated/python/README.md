@@ -1,13 +1,18 @@
 # Supadata Python SDK
 
+> **Unofficial Octri evaluation demo.** Not endorsed by Supadata. Use the local files in this repository; this demo is not published on npm or PyPI. [Runnable offline examples](../../../README.md) · [Validation and local repairs](../../../evidence/VALIDATION.md).
+
+
 Web & Social Media Content API for Developers
 
-> Package `supadata` · Version `1.3.0` · 21 operations
+> Package `octri-demo-supadata` · Version `1.3.0` · 21 operations
 
 ## Installation
 
+From this SDK directory, with a Python virtual environment active:
+
 ```sh
-python -m pip install supadata==1.3.0
+python -m pip install .
 ```
 
 ## Quickstart
@@ -85,7 +90,7 @@ An operation that declares error models also defines `<Operation>Error` beside i
 ## Local mock-server tests
 
 Generated SDK includes schema-derived, zero-dependency mock server and network
-contract suite. Node.js 20+ required. Contract probes use authored response
+contract suite. Node.js 22.12+ required. Contract probes use authored response
 examples only; schema-synthesized routes remain available to the local server.
 
 `./scripts/mock --port 4010` starts server. `./scripts/test` runs the mock contract suite, then native SDK tests. A zero-authored-example contract run succeeds with an explicit zero-test

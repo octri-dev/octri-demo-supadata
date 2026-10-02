@@ -67,6 +67,17 @@ def _matches(actual: Any, expected: Any) -> bool:
             and len(actual) == len(expected)
             and all(_matches(item, expected[index]) for index, item in enumerate(actual))
         )
+    # Pydantic parses date-time fields and may change fractional-second precision.
+    # Preserve comparison of instants without relaxing ordinary string equality.
+    if isinstance(actual, str) and isinstance(expected, str) and "T" in actual and "T" in expected:
+        try:
+            actual_time = datetime.fromisoformat(actual.replace("Z", "+00:00"))
+            expected_time = datetime.fromisoformat(expected.replace("Z", "+00:00"))
+        except ValueError:
+            pass
+        else:
+            if actual_time.tzinfo is not None and expected_time.tzinfo is not None:
+                return actual_time == expected_time
     return actual == expected
 
 
@@ -172,3 +183,10 @@ async def test_generated_method_reaches_mock_and_decodes_response(
             f"{case['methodName']} returned {actual!r}, expected representative "
             f"{response['expected']!r}"
         )
+
+
+def test_response_comparison_preserves_timestamp_meaning() -> None:
+    assert _matches("2009-10-25T00:00:00Z", "2009-10-25T00:00:00.000Z")
+    assert _matches("2025-04-03T06:59:53.428000Z", "2025-04-03T06:59:53.428Z")
+    assert not _matches("2025-04-03T06:59:53.429Z", "2025-04-03T06:59:53.428Z")
+    assert not _matches("TikTok", "Twitter")
