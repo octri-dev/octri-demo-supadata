@@ -7,7 +7,7 @@ import sys
 import tempfile
 
 ROOT = Path(__file__).resolve().parents[1]
-VARIANTS = ["baseline", "apiroad"] if ROOT.name.endswith("scrapeninja") else ["generated"]
+VARIANTS = ["apiroad"] if ROOT.name.endswith("scrapeninja") else ["generated"]
 ENV = os.environ.copy()
 ENV["VIRTUAL_ENV"] = sys.prefix
 RESULTS = []

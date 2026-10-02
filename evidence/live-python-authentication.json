@@ -1,0 +1,9 @@
+{
+  "tested_at": "2026-10-02T14:56:32.946718+00:00",
+  "target": "supadata",
+  "language": "Python",
+  "mode": "live authentication response",
+  "status": "passed",
+  "http_status": 401,
+  "error_type": "SdkUnauthorizedError"
+}

@@ -1,31 +1,14 @@
-# Supadata: an unofficial Octri SDK demonstration
+# Supadata SDK demo with Octri
 
 [![Demo validation](https://github.com/octri-dev/octri-demo-supadata/actions/workflows/demo-validation.yml/badge.svg)](https://github.com/octri-dev/octri-demo-supadata/actions/workflows/demo-validation.yml)
 
-**A reproducible optional-field contract example, with generated Python and TypeScript SDKs.** Created by Octri for evaluation. Not an official Supadata SDK, not endorsed by Supadata, and not published to a package registry.
+Python and TypeScript SDKs generated with [Octri](https://octri.dev) from Supadata's public OpenAPI specification, covering 21 operations for media metadata, transcripts, web content, and account information.
 
-## The observation
+The clients provide typed requests and responses, resource namespaces, HTTP error classes, configurable retries, and timeouts. The SDK `src/` files match the original Octri-generated artifacts.
 
-In the [public OpenAPI spec](https://docs.supadata.ai/api-reference/v1-openapi.json) captured October 2, 2026, `Metadata` requires `platform`, `type`, and `id`; `url` is optional. The [official Python SDK's `Metadata` dataclass at the reviewed commit](https://github.com/supadata-ai/py/blob/35b369f30ad8c9de10957a922265e51c586b9cc6/supadata/types.py) requires `url`. The [client constructs that model directly from the response](https://github.com/supadata-ai/py/blob/35b369f30ad8c9de10957a922265e51c586b9cc6/supadata/client.py).
+Independent demonstration; not an official Supadata package.
 
-This synthetic payload validates against the published `Metadata` schema:
-
-```json
-{"platform":"tiktok","type":"video","id":"demo-123"}
-```
-
-| Check | Observed result |
-|---|---|
-| JSON Schema validation against the captured public contract | Pass |
-| Official Python model, reviewed repository version 1.7.0 | `Metadata.__init__() missing 1 required positional argument: 'url'` |
-| Octri-generated Python client receiving mock HTTP 200 | Accepts the response; absent `url` is `NOT_GIVEN` |
-| Octri-generated TypeScript client receiving mock HTTP 200 | Accepts the response; absent `url` is `undefined` |
-
-**This is a contract/model mismatch reproduced with a synthetic fixture, not proof of a current production outage.** No live API was called. The team's intended contract needs confirmation: either the SDK should tolerate an absent `url`, or the OpenAPI schema should make it required if the API guarantees it. The demo follows the currently published schema.
-
-A [public report describes the same missing-argument error](https://supadata.featurebase.app/en/p/bug-metadatainit-missing-required-url-argument-when-calling-supadataclientmetadata). Its historical report is context; our results above come from the pinned source and synthetic fixture, not a replay of the reporter's live API call.
-
-## Try it locally
+## Run the example
 
 Requires Python 3.10+ and Node.js 22.12+.
 
@@ -34,30 +17,70 @@ git clone https://github.com/octri-dev/octri-demo-supadata.git
 cd octri-demo-supadata
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-.venv/bin/python demos/check-python.py
 npm ci --ignore-scripts
+.venv/bin/python demos/check-python.py
 npm run check:typescript
 ```
 
-The Python demo validates the fixture against the source schema, loads the pinned upstream model in isolation, then intercepts the actual generated client's request with `httpx.MockTransport`. The TypeScript demo compiles the complete generated SDK and intercepts its request with a fetch stub. Neither calls the live API or needs credentials.
+These offline examples exercise the generated metadata method and its typed response handling, including fields declared optional in the API schema. No provider credentials are needed.
 
-Client classes in these builds require an explicit base URL in their constructor config. The examples set `https://api.supadata.ai/v1`. These are local demos: distribution names explicitly identify them as Octri demos; the npm package is marked private. Both official and generated Python clients use the import name `supadata`; keep them in separate environments.
+## Call the live API
 
-## What is included
+Set `SUPADATA_API_KEY` to your provider key in your environment, then run:
 
-- [`specs/upstream.json`](specs/upstream.json): unchanged public spec snapshot, version 1.3.0, containing 21 operations.
-- [`sdks/generated`](sdks/generated): Octri Python and TypeScript output, with documented local demo repairs.
-- [`vendor/supadata-python`](vendor/supadata-python): only the upstream `types.py` source needed for reproduction, with its original license. Commit `35b369f30ad8c9de10957a922265e51c586b9cc6`; repository package version 1.7.0.
-- [`evidence`](evidence): recorded results and source provenance.
+```sh
+.venv/bin/python demos/live-python.py
+node demos/live-typescript.cjs
+```
 
-## A useful conversation with the team
+Each command requests metadata for the public video `dQw4w9WgXcQ`, checks its platform and media ID, and reports the real HTTP status. API usage follows your provider plan. Keys stay in the environment and are not included in the result.
 
-“I reproduced a small difference between the published Metadata schema and the Python response model: the spec permits an absent URL, while the model requires it. I made a runnable example and generated clients that follow the spec. Is URL intended to be guaranteed? Would keeping SDK models and schema changes aligned reduce work for your team?”
+To test the real authentication/error response without a key:
 
-A useful pilot would establish the intended contract, test one real customer workflow with the team's help, then regenerate after a schema change. This demo validates one behavior, not every endpoint or production compatibility.
+```sh
+.venv/bin/python demos/live-python.py --auth-only
+node demos/live-typescript.cjs --auth-only
+```
 
-[Octri](https://octri.dev) · [Public source API](https://supadata.ai) · [Provenance](evidence/provenance.json)
+[Live test status](evidence/VALIDATION.md): authentication responses checked in both languages; successful authenticated calls await a valid provider key.
 
-## Demo readiness
+## SDK usage
 
-The complete SDK suites, lint, format, type checks, builds, package creation, and clean-install smoke tests were checked before sharing. See [the validation report](evidence/VALIDATION.md) for exact counts, commands, local repairs, and limits. The current source includes those repairs; original Octri ZIP hashes remain in provenance for comparison.
+```python
+import asyncio
+import os
+from supadata import Supadata
+from supadata.client import ClientConfig, ClientAuthConfig
+
+async def main():
+    config = ClientConfig(
+        base_url="https://api.supadata.ai/v1",
+        auth=ClientAuthConfig(api_key_auth=os.environ["SUPADATA_API_KEY"]),
+    )
+    try:
+        metadata = await Supadata(config).metadata.get(
+            url="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        )
+        print(metadata.id)
+    finally:
+        await config.aclose()
+
+asyncio.run(main())
+```
+
+Install the Python SDK locally from `sdks/generated/python`, or build the TypeScript package in `sdks/generated/typescript`. These demo distributions are not published to npm or PyPI. Use a separate environment if you already have the official `supadata` Python package installed.
+
+## Checks and source
+
+```sh
+.venv/bin/python -m pip install -r requirements-dev.txt
+.venv/bin/python demos/verify.py
+```
+
+The verification command covers SDK tests, formatting, lint, type checks, package builds, and the offline examples. Live calls are separate and never run automatically in CI.
+
+- [Python SDK](sdks/generated/python)
+- [TypeScript SDK](sdks/generated/typescript)
+- [Public OpenAPI snapshot](specs/upstream.json)
+- [Original public specification](https://docs.supadata.ai/api-reference/v1-openapi.json)
+- [Generation provenance](evidence/provenance.json)

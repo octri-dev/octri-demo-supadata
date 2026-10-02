@@ -136,7 +136,7 @@ export async function coreTransport(request: SdkRequest): Promise<SdkResponse<un
   const response = await fetch(request.url, {
     method: request.method,
     headers: request.headers,
-    ...(request.method === "GET" || request.method === "HEAD" ? {} : { body: request.body }),
+    body: request.body,
     signal: request.signal,
   });
   const respHeaders = collectHeaders(response);

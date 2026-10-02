@@ -1,6 +1,6 @@
 # Supadata TypeScript SDK
 
-> **Unofficial Octri evaluation demo.** Not endorsed by Supadata. Use the local files in this repository; this demo is not published on npm or PyPI. [Runnable offline examples](https://github.com/octri-dev/octri-demo-supadata) · [Validation and local repairs](https://github.com/octri-dev/octri-demo-supadata/blob/main/evidence/VALIDATION.md).
+> **Unofficial Octri evaluation demo.** Not endorsed by Supadata. Use the local files in this repository; this demo is not published on npm or PyPI. [Runnable offline examples](https://github.com/octri-dev/octri-demo-supadata) · [Demo tests](https://github.com/octri-dev/octri-demo-supadata/blob/main/evidence/VALIDATION.md).
 
 
 Web & Social Media Content API for Developers

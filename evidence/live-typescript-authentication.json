@@ -1,0 +1,9 @@
+{
+  "tested_at": "2026-10-02T14:56:34.575Z",
+  "target": "supadata",
+  "language": "TypeScript",
+  "mode": "live authentication response",
+  "status": "passed",
+  "http_status": 401,
+  "error_type": "SdkUnauthorizedError"
+}

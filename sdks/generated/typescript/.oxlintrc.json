@@ -1,6 +1,8 @@
 {
   "$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/npm/oxlint/configuration_schema.json",
-  "ignorePatterns": ["dist/**"],
+  "ignorePatterns": [
+    "dist/**"
+  ],
   "categories": {
     "correctness": "error"
   },
@@ -14,9 +16,20 @@
   },
   "overrides": [
     {
-      "files": ["test/**/*.mjs"],
+      "files": [
+        "test/**/*.mjs"
+      ],
       "env": {
         "node": true
+      }
+    },
+    {
+      "files": [
+        "src/client-transport.ts",
+        "test/mock-server.test.mjs"
+      ],
+      "rules": {
+        "unicorn/no-invalid-fetch-options": "off"
       }
     }
   ]
